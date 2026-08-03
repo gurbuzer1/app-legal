@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — ScoreLens</title>
+<meta name="description" content="ScoreLens privacy policy — one camera frame is sent to recognise a title and is never stored. No account, no analytics, no ads.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html" class="back-link">← All Apps</a>
+</header>
+<main>
+  <span class="badge">PRIVACY POLICY</span>
+  <h1>ScoreLens</h1>
+  <p class="meta">Effective: 3 August 2026</p>
+
+  <p>ScoreLens reads the title off a screen you point your phone at and shows you
+    what it scored. This page says exactly what that costs you in data — and
+    unlike most of our apps, the honest answer is not "nothing", so it is spelled
+    out first.</p>
+
+  <h2>The camera</h2>
+  <p><strong>One frame leaves your device.</strong> When you take a shot, that single
+    still is sent to our server, which passes it to the Anthropic Claude API to read
+    the title. That is the whole reason the app works, and there is no on-device way
+    to do it today.</p>
+  <p>The frame is <strong>not stored</strong> — not by us and not in any database. It
+    exists for the length of the request and is discarded when the answer comes back.
+    There is no photo library access: the app only sees the frame you deliberately
+    capture.</p>
+
+  <h2>What stays on your device</h2>
+  <p>Your scan history. It is written to the app's own storage and never sent
+    anywhere. Clearing it, or deleting the app, removes it completely.</p>
+
+  <h2>What we never collect</h2>
+  <p>There is no account and no sign-up, so there is nothing to attach a scan to.
+    <strong>No analytics, no advertising, no crash reporter, no third-party SDK</strong>
+    and no data sharing.</p>
+
+  <h2>Third parties, and exactly what each receives</h2>
+  <ul>
+    <li><strong>Anthropic (Claude API)</strong> — receives the single camera frame,
+      to read the title from it.</li>
+    <li><strong>OMDb API</strong> — receives the <em>title text only</em>, to look up
+      the rating, year, runtime and genre. It never sees an image.</li>
+  </ul>
+  <p>Neither receives your name, your device identifier or your history, because the
+    app does not have them.</p>
+
+  <h2>Children</h2>
+  <p>ScoreLens is not directed at children under 13 and collects no personal
+    information from them.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a>.</p>
+
+  <p class="meta">Emre Gürbüzer · <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a></p>
+</main>
+</body>
+</html>
