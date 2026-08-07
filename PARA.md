@@ -46,13 +46,40 @@ AYAKTA olması gerekli.** Ölçülmesi gereken şey fiyat değil, **erişilebili
   izleyici koymak, sayfanın kendi metnini yalanlar.
 - Bu depo bir ürün gibi sıraya alınmayacak; **bağımlılık** olarak izlenecek.
 
+## ✅ Tam ölçüm yapıldı (2026-08-07) — ve asıl bulgu BAŞKA YERDEYDİ
+
+Önceki turda "20'nin tamamı ölçülmedi" diye sıraya yazılmıştı. Yapıldı:
+
+**1) Bu sitedeki her sayfa** — 20 dizindeki `privacy.html` / `support.html`
+dosyalarının **hepsi 200**. Tek bir ölü sayfa yok.
+
+**2) Üç dizinde `privacy.html` YOK** (`caniai`, `forget-me-not`, `skillquest`)
+ve o yollar gerçekten **404** veriyor. Ama ölü bağlantı **değiller**: ölçüm
+ASC'ye kadar götürülünce üçünün de kendi alan adını beyan ettiği görüldü
+(`caniai.vercel.app/privacy`, `gurbuzer1forget-me-not.vercel.app/privacy`,
+`skillquest.46-225-185-206.nip.io/privacy`) — üçü de **200**.
+⚠️ Yani "dosya yok" tek başına bulgu değildi; bulgu ancak **ASC'nin ne
+beyan ettiğiyle karşılaştırınca** ortaya çıkar ya da çıkmaz.
+
+**3) 27 app'in TAMAMININ beyan ettiği gizlilik URL'si çağrıldı: 26'sı 200.**
+
+🔴 **Dönmeyen tek app: `Decide For Us` — App Store'da CANLI olan iki app'ten
+biri.** `decideforus.app` DNS'te çözülüyor (`198.54.117.242`, park IP'si) ama
+TLS 443 **ECONNREFUSED**; `/privacy`, `/` ve `www.*` üçü de **000**. Çalışan
+sayfa bu sitede duruyor (`…/app-legal/decideforus/privacy.html` → 200) ama ASC
+oraya bakmıyor.
+
+Ayrıntı ve düzeltme yolu: canonical `decideforus` deposunun `PARA.md`'sinde
+(`0d92716`). Özet: ASC alanı donmuş (`READY_FOR_SALE`, düzenlenebilir `appInfo`
+yok), **doğru çözüm alan adını yeniden yayına almak** — yeni sürüm gerekmiyor.
+
+İki app'in (`Helal Barkod`, `Aktüel Takip`) beyan edilmiş gizlilik URL'si
+**hiç yok**; ikisi de zaten yayın engeli yazılı olanlar.
+
 ## Sıra
 
-1. **Ayakta kalma ölçümü kurulmalı**: 20 dizinin her birindeki `privacy.html`
-   ve varsa `support.html` **200 dönüyor mu** — düzenli olarak. Bugün kök ve bir
-   örnek ölçüldü (ikisi de 200), **20'nin tamamı ölçülmedi.**
-2. ASC'deki gizlilik URL'leri bu sitedeki gerçek yollarla **karşılaştırılmalı**:
-   bir app'in ASC'de yazdığı adres burada yoksa, bağlantı ölü demektir ve bunu
-   yalnızca karşılaştırma ortaya çıkarır.
+1. ✅ Ayakta kalma ölçümü **yapıldı** (yukarıda). Tekrarlanabilir olması için
+   düzenli koşum kalıyor.
+2. ✅ ASC karşılaştırması **yapıldı** — ve tek gerçek bulguyu o ortaya çıkardı.
 3. GitHub Pages'in kendisi bir bağımlılık — barındırma değişirse 20 app birden
    etkilenir.
