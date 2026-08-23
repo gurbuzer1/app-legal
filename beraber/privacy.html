@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beraber — Privacy</title>
+<style>
+  :root {
+    --bg: #F4F2F0; --card: #FFFFFF; --text: #1A1714; --dim: #6B625A; --line: #DAD4CE;
+    --accent: #A0591B;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131110; --card: #201D1A; --text: #EFEAE4; --dim: #A0968B; --line: #332E29;
+      --accent: #E8A85C;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
+  h2 { font-size: 1.18rem; margin: 38px 0 10px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 7px; }
+  .lede {
+    background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+    border-radius: 12px; padding: 18px 20px; margin: 0 0 10px;
+  }
+  .lede p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  code { font-size: 0.92em; }
+  footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--dim); font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy</h1>
+  <p class="updated">Beraber (HERD) · last updated 23 August 2026</p>
+
+  <div class="lede">
+    <p><strong>Beraber collects nothing, sends nothing, and has nowhere to send it.</strong>
+    The app makes no network requests. There is no account, no analytics, no crash reporter,
+    no advertising identifier, and no third-party SDK that could add one.</p>
+  </div>
+
+  <h2>What the app stores</h2>
+  <p>One thing, on your own device, in the storage the app is given for its own use: for each
+  level you have solved, the sequence of directions that solved it.</p>
+  <p>A saved solution is literally a short string of letters, one per step — up, down, left,
+  right — filed under the level it belongs to. That is the entire save. There is no name, no
+  timestamp, no device identifier, no play time, no score, and no record of the attempts that
+  did not work.</p>
+  <p>The save is not a claim the app trusts. Each time a level is checked, the stored sequence is
+  walked again on that level's board; if it does not actually finish the level, it does not count.
+  That is why there is no "solved" flag to store — the app can always tell by replaying what you
+  did.</p>
+  <p>Nothing in the save identifies you, none of it is transmitted anywhere, and deleting the app
+  removes it.</p>
+
+  <h2>Where the puzzles come from</h2>
+  <p>All ninety-nine boards are built into the app before it ships, and every one of them was
+  solved by computer first. Nothing is fetched while you play, which is why the game works with
+  the aeroplane switch on.</p>
+
+  <h2>Permissions and money</h2>
+  <p>The app requests no permissions at all — not the camera, the microphone, your location, your
+  photos, your contacts, or notifications. It does not ask because it has no code that would use
+  them. There are also no in-app purchases, no subscription and no advertising: the app links no
+  payment or ad framework of any kind, so there is nothing to bill and no payment detail for it
+  to see.</p>
+
+  <h2>Children</h2>
+  <p>The app is safe for children. There is no chat, no user-generated content shared with
+  anyone, no browser, no link that leaves the app, and nothing to buy. Since nothing is collected
+  from anybody, nothing is collected from children either.</p>
+
+  <h2>Third parties</h2>
+  <p>None. No advertising network, no analytics provider, no cloud backend. The app has no server
+  component, so there is no operator to whom your data could be disclosed and no breach that
+  could expose it.</p>
+
+  <h2>Your rights</h2>
+  <p>Rights to access, correct, export or erase personal data — under the UK GDPR, the EU GDPR,
+  or the CCPA — apply to data a company holds about you. No such data exists here. Everything the
+  app has ever written is on your device: deleting the app deletes all of it.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a></p>
+
+  <footer>
+    Beraber is made by Emre Gürbüzer. This page lives at
+    <a href="https://gurbuzer1.github.io/app-legal/beraber/privacy.html">https://gurbuzer1.github.io/app-legal/beraber/privacy.html</a>.
+  </footer>
+</main>
+</body>
+</html>
