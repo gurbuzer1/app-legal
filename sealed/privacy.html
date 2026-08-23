@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Whittle — Privacy</title>
+<title>Sealed — Privacy</title>
 <style>
   :root {
     --bg: #F4F2F0; --card: #FFFFFF; --text: #1A1714; --dim: #6B625A; --line: #DAD4CE;
-    --accent: #2F6B4F;
+    --accent: #2B3A8F;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #131110; --card: #201D1A; --text: #EFEAE4; --dim: #A0968B; --line: #332E29;
-      --accent: #63C79A;
+      --bg: #14120F; --card: #211E1A; --text: #EFEAE4; --dim: #A0968B; --line: #342F29;
+      --accent: #8B9CF0;
     }
   }
   * { box-sizing: border-box; }
@@ -39,34 +39,36 @@
 <body>
 <main>
   <h1>Privacy</h1>
-  <p class="updated">Whittle · last updated 23 August 2026</p>
+  <p class="updated">Sealed · last updated 23 August 2026</p>
 
   <div class="lede">
-    <p><strong>Whittle collects nothing, sends nothing, and has nowhere to send it.</strong>
+    <p><strong>Sealed collects nothing, sends nothing, and has nowhere to send it.</strong>
     The app makes no network requests at all. There is no account, no analytics, no crash
     reporter, no advertising identifier, and no third-party SDK that could add one.</p>
   </div>
 
   <h2>What the app stores</h2>
-  <p>Four numbers and two choices, on your own device, in the storage iOS gives the app for
-  its own use.</p>
-  <p>The four numbers are your record: how many boards you have finished, how many you
-  cleared, how many of those were without a mistake, and how many wrong moves you have made
-  in total.</p>
-  <p>The two choices are the difficulty you picked — how many wrong strikes a board allows —
-  and which board you are up to, so that closing the app does not deal you the first board
-  again tomorrow.</p>
-  <p>That is the whole of it. Nothing in it identifies you, none of it is transmitted
-  anywhere, and deleting the app removes it. The boards themselves are generated as you play
-  and are never written down.</p>
+  <p>Four numbers, on your own device, in the storage iOS gives the app for its own use:
+  how many boards you have played, the most you have kept from one, how many boards you
+  ended by selling, and how many times what you kept beat what you turned down. That is the
+  whole of it. Nothing in it identifies you, none of it is transmitted anywhere, and
+  deleting the app removes it.</p>
+  <p>The board itself is never written down, and that is deliberate rather than incidental:
+  the promise of this game is that the arrangement is fixed at deal time and never touched
+  again, and a saved board would be a file that could be edited between one session and the
+  next.</p>
 
-  <h2>Where the facts come from</h2>
-  <p>Every clue is a statement about a real country, taken from open data that ships inside
-  the app: names, capitals, regions, areas, land borders and currencies from the
-  <a href="https://github.com/mledoze/countries">mledoze/countries</a> dataset, under the
-  ODC Open Database License, and populations from World Bank indicator
-  <code>SP.POP.TOTL</code>. Nothing is fetched while you play — the table is compiled into
-  the app before it ships, which is why the game works with the aeroplane switch on.</p>
+  <h2>There is no money here</h2>
+  <p>The values on the board are points. Nothing in this app can be bought, sold, wagered
+  or withdrawn, and no payment method is ever involved. The ladder runs to 750,000 because
+  that is a satisfying number, not because it is a sum.</p>
+
+  <h2>The board is not watching you</h2>
+  <p>Worth saying plainly, because it is the thing people reasonably wonder about a game
+  like this: the arrangement of the boxes is decided before you touch anything and is never
+  changed afterwards. It does not respond to how you are playing, and neither does the
+  offer — that is a fixed share of what is left, published on the app's own first screen.
+  None of it involves anything leaving your phone, because nothing leaves your phone.</p>
 
   <h2>Children</h2>
   <p>The app is rated 4+ and is safe for children. There is no chat, no user-generated
@@ -86,7 +88,7 @@
   <h2>Contact</h2>
   <p><a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a></p>
 
-  <footer>Whittle is made by Emre Gürbüzer.</footer>
+  <footer>Sealed is made by Emre Gürbüzer.</footer>
 </main>
 </body>
 </html>

@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ballpark — Privacy</title>
+<title>Recall — Privacy</title>
 <style>
   :root {
-    --bg: #F6F3EE; --card: #FFFFFF; --text: #17150F; --dim: #5E5850; --line: #DDD6CB;
-    --accent: #8A4B14;
+    --bg: #F5F3EE; --card: #FFFFFF; --text: #16181C; --dim: #5B6068; --line: #DCD8D0;
+    --accent: #1B4D8F;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #12100E; --card: #1D1A16; --text: #F3EFE8; --dim: #A79E92; --line: #332E28;
-      --accent: #E39A4E;
+      --bg: #101418; --card: #191F26; --text: #F2F4F7; --dim: #A2AAB5; --line: #2B333C;
+      --accent: #7FB3F2;
     }
   }
   * { box-sizing: border-box; }
@@ -28,10 +28,10 @@
   ul { margin: 0 0 14px; padding-left: 1.3em; }
   li { margin-bottom: 7px; }
   .lede {
-    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
-    padding: 20px 22px; margin: 0 0 30px; font-size: 1.06rem;
+    background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+    border-radius: 12px; padding: 18px 20px; margin: 0 0 10px;
   }
-  .lede strong { color: var(--accent); }
+  .lede p:last-child { margin-bottom: 0; }
   code {
     font: 0.9em ui-monospace, SFMono-Regular, Menlo, monospace;
     background: var(--card); border: 1px solid var(--line); border-radius: 5px;
@@ -45,13 +45,14 @@
 <main>
 
 <h1>Privacy</h1>
-<p class="updated">Ballpark · last updated 23 August 2026</p>
+<p class="updated">Recall · last updated 23 August 2026</p>
 
-<p class="lede">
-  <strong>Ballpark collects nothing, sends nothing, and has no way to.</strong>
+<div class="lede">
+  <p>
+  <strong>Recall collects nothing, sends nothing, and has no way to.</strong>
   The app makes no network requests at all. There is no account, no analytics, no
-  advertising, and no third-party code that could carry anything off the device.
-</p>
+  advertising, and no third-party code that could carry anything off the device.</p>
+</div>
 
 <h2>What the app stores</h2>
 <p>
@@ -59,17 +60,13 @@
 </p>
 <ul>
   <li>how many rounds you have played;</li>
-  <li>your best single round;</li>
-  <li>your totals — points scored and questions answered, for the average;</li>
-  <li>how many single guesses landed within a tenth of the truth, which is the one
-      count of skill in the record;</li>
+  <li>your best score in a single round;</li>
+  <li>your totals — right answers, questions faced, passes used;</li>
   <li>whether you have turned haptic feedback off;</li>
-  <li>which clock you chose — no clock, four seconds a question, or two — so that the
-      choice is still there next time you open the app.</li>
+  <li>which of the four difficulty settings you last chose.</li>
 </ul>
 <p>
-  Nothing else. Not the questions you were asked, not the numbers you guessed, not when you
-  played.
+  Nothing else. Not the questions you were asked, not what you typed, not when you played.
   The file lives in the app's own storage, is never uploaded, and is deleted with the app.
 </p>
 
@@ -97,16 +94,15 @@
 
 <h2>Where the questions come from</h2>
 <p>
-  The figures are compiled into the app before it ships and are never fetched. They come
+  The country data is compiled into the app before it ships and is never fetched. It comes
   from <a href="https://github.com/mledoze/countries">mledoze/countries</a>, under the Open
-  Database License, and from two World Bank indicators — population (SP.POP.TOTL) and GDP
-  per capita (NY.GDP.PCAP.CD). Neither source is contacted at runtime; both are read once,
-  on a build machine, into a table inside the app.
+  Database License, and from the World Bank's population indicator. Neither is contacted at
+  runtime; both are read once, on a build machine, into a table inside the app.
 </p>
 
 <h2>Children</h2>
 <p>
-  Ballpark is rated 4+ and is safe for children for the simple reason that it has no way to
+  Recall is rated 4+ and is safe for children for the simple reason that it has no way to
   reach anything. There is nothing to buy, nobody to talk to, and no data to collect.
 </p>
 
@@ -123,7 +119,7 @@
 </p>
 
 <footer>
-  Ballpark is made by Emre Gürbüzer. This page is served as a static file and sets no
+  Recall is made by Emre Gürbüzer. This page is served as a static file and sets no
   cookies.
 </footer>
 

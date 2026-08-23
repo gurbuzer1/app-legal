@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KiranaBook — Support</title>
+<style>
+  :root {
+    --bg: #F4F2F0; --card: #FFFFFF; --text: #1A1714; --dim: #6B625A; --line: #DAD4CE;
+    --accent: #1DA851;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131110; --card: #201D1A; --text: #EFEAE4; --dim: #A0968B; --line: #332E29;
+      --accent: #25D366;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
+  h2 { font-size: 1.18rem; margin: 34px 0 8px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 7px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 20px; margin: 0 0 22px;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  blockquote {
+    margin: 0 0 16px; padding: 12px 16px; border-left: 3px solid var(--accent);
+    background: var(--card); border-radius: 0 10px 10px 0; color: var(--dim);
+  }
+  blockquote p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; font-size: 0.9em; }
+  footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--dim); font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Support</h1>
+  <p class="updated">KiranaBook · last updated 23 August 2026</p>
+
+  <div class="card">
+    <p>Anything at all — a total that came out wrong, a khata balance you do not recognise,
+    a bill that would not print, a crash — write to
+    <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a>. Tell me what you tapped
+    and what you expected; that is usually enough to find it.</p>
+  </div>
+
+  <h2>Where is my data kept?</h2>
+  <p>On your phone, in the app's own storage, and nowhere else. There is no account and no
+  cloud. That is deliberate — the shop's book is yours — but it has one consequence worth
+  saying plainly: <strong>if you delete the app or lose the phone, the data goes with
+  it.</strong> There is no server copy to restore from.</p>
+
+  <h2>Does it need internet?</h2>
+  <p>No. Billing, khata, stock, reports and the UPI QR code all work in aeroplane mode.
+  The only moments a connection matters are the ones you start yourself: opening WhatsApp
+  to send a reminder, or sharing a bill to another app.</p>
+
+  <h2>A customer's balance looks wrong</h2>
+  <p>Open the customer and read down the entries. The balance is a running total: every
+  credit adds, every payment subtracts, and deleting an entry puts back exactly what it
+  took. That agreement is not assumed — the test suite adds long runs of mixed entries,
+  deletes some, closes and reopens the book, and checks the stored balance still equals
+  credit minus payments for the rows you can see. If your rows are right and the total is
+  not, please write to me with the figures; that is a bug and I want it.</p>
+
+  <h2>Can I scan a barcode with the camera?</h2>
+  <p>Not yet. The barcode field on a product is typed in, and it is used for searching your
+  own catalogue. The app asks for no camera permission, because it has no scanner to use
+  it with.</p>
+
+  <h2>Is the GST calculation official?</h2>
+  <p>No. The GST percentage is one you enter, and the app multiplies. It is arithmetic to
+  save you doing it on paper, not tax advice — check anything that goes to your accountant.</p>
+
+  <h2>Are there ads or a subscription?</h2>
+  <p>Neither. Every feature in the app is available to everybody, there is nothing to buy
+  inside it, and no advertising library has ever been part of it.</p>
+
+  <h2>Hindi and English</h2>
+  <p>Both are complete. Switch in Settings → Language; the change applies immediately and
+  is remembered.</p>
+
+
+  <h2 id="terms">Terms of use</h2>
+  <p>KiranaBook is provided free, as is, with no warranty. It is a supplementary tool for
+  running a shop, not an accounting system of record. In particular:</p>
+  <ul>
+    <li>Bill totals and GST figures are arithmetic on the numbers and percentages
+    <em>you</em> enter. Check anything that goes to your accountant or to the tax
+    authorities.</li>
+    <li>Khata balances are what the app has been told. They are not proof of a debt.</li>
+    <li>The UPI QR code is drawn from the UPI ID you typed. Payments happen between your
+    customer and their payment app; the app is not a payment processor and never sees the
+    money.</li>
+  </ul>
+  <p>Your shop's data lives only on your device. There is no server copy, so keeping it is
+  your responsibility: if the phone is lost, reset, or the app deleted, the book goes with
+  it and cannot be recovered by me or by anyone else.</p>
+  <p>There is nothing to buy inside the app and no advertising. Questions about these terms
+  go to <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a>, the same address as
+  everything else.</p>
+
+  <h2>Privacy</h2>
+  <p>Nothing is collected. The full statement is at
+  <a href="privacy.html">the privacy page</a>.</p>
+
+  <footer>KiranaBook is made by Emre Gürbüzer.</footer>
+</main>
+</body>
+</html>

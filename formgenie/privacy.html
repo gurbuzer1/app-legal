@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FormGenie — Privacy</title>
+<style>
+  :root {
+    --bg: #F4F2F0; --card: #FFFFFF; --text: #1A1714; --dim: #6B625A; --line: #DAD4CE;
+    --accent: #2F5FA8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131110; --card: #201D1A; --text: #EFEAE4; --dim: #A0968B; --line: #332E29;
+      --accent: #7FB0EC;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
+  h2 { font-size: 1.18rem; margin: 38px 0 10px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 7px; }
+  .lede {
+    background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+    border-radius: 12px; padding: 18px 20px; margin: 0 0 10px;
+  }
+  .lede p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; font-size: 0.9em; }
+  footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--dim); font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy</h1>
+  <p class="updated">FormGenie · last updated 23 August 2026</p>
+
+  <div class="lede">
+    <p><strong>FormGenie makes no network request, so nothing you type can leave your
+    phone.</strong> There is no account, no server, no analytics, no crash reporter and no
+    advertising identifier. This matters more here than in most apps: the app exists to
+    help you fill in tax and immigration forms, so the things you type into it are exactly
+    the things you would least like to send anywhere.</p>
+  </div>
+
+  <h2>What the app stores</h2>
+  <p>Only the answers you type into a form, and only on this device. They are written to
+  the storage iOS gives the app for its own use, under a single key, so you can close a
+  half-finished W-4 or SA100 and come back to it rather than starting again.</p>
+  <p>Those answers can include sensitive details, because government forms ask for them:
+  names, dates of birth, national insurance and social security numbers, PAN and Aadhaar
+  numbers, addresses, income figures. That is precisely why they are never transmitted.
+  There is no cloud backup by the app, no sync between devices, and no copy anywhere but
+  the phone in your hand.</p>
+
+  <h2>What ships with the app rather than being fetched</h2>
+  <p>The whole catalogue — 15 official forms across the United States, the United Kingdom
+  and India, with 115 fields explained — is compiled into the app before it ships. Opening
+  a form, reading an explanation and saving an answer all happen with the aeroplane switch
+  on. Nothing is looked up, so nothing about what you are reading is observable by anyone.</p>
+
+  <h2>Permissions the app does not ask for</h2>
+  <p>None. <code>Info.plist</code> contains no usage-description key of any kind, which is
+  the only way an iOS app can request access to anything. No camera, no photo library, no
+  contacts, no location, no microphone, no notifications. There is no document upload and
+  no OCR: an earlier build announced one and never had it.</p>
+
+  <h2>Links out of the app</h2>
+  <p>Every form links to its own official government page — <a href="https://www.irs.gov/forms-pubs/about-form-w-4">irs.gov</a>
+  for the W-4, gov.uk for the SA100, and so on. Tapping one opens your browser and leaves
+  FormGenie. What happens after that is between you and that website, under its own privacy
+  policy; the app has no involvement and learns nothing about it.</p>
+
+  <h2>Third parties</h2>
+  <p>None. No advertising network, no analytics provider, no cloud backend, no AI service.
+  In particular there is no model call of any kind: every explanation in the app is written
+  text that ships inside it. The app has no server component, so there is no operator to
+  whom your answers could be disclosed and no breach that could expose them.</p>
+
+  <h2>This is not legal or tax advice</h2>
+  <p>FormGenie explains what fields mean in plain English. It is not a lawyer, an
+  accountant or an immigration adviser, it does not check your answers against your
+  circumstances, and it does not submit anything on your behalf. Where the official form
+  has a section this guide does not walk you through, the app names that section rather
+  than letting you finish and believe you are done. For decisions that matter, follow the
+  official link or speak to a professional.</p>
+
+  <h2>Deleting your data</h2>
+  <p>Empty a form's fields to clear its saved answers, or delete the app, which removes
+  everything it ever stored. There is no account to close and nothing to request from us,
+  because nothing ever reached us.</p>
+
+  <h2>Your rights</h2>
+  <p>Rights to access, correct, export or erase personal data — under the UK GDPR, the EU
+  GDPR, the CCPA or India's DPDP Act — apply to data a company holds about you. No such
+  data exists here. Everything the app has ever written is on your device.</p>
+
+  <h2>Children</h2>
+  <p>The app is not directed at children and collects nothing from anyone.</p>
+
+  <h2>Changes</h2>
+  <p>If a future version ever adds a backup, a sync service or anything that sends data
+  anywhere, this page will be updated before that version ships and the change will be
+  described here rather than buried.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:gurbuzer1@gmail.com?subject=FormGenie%20privacy">gurbuzer1@gmail.com</a></p>
+
+  <footer>FormGenie is made by Emre Gürbüzer. Not affiliated with any government agency.</footer>
+</main>
+</body>
+</html>

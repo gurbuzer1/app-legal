@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onbir — Support</title>
+<meta name="description" content="Support for Onbir: how to play, streaks, data corrections, offline behaviour and contact.">
+<style>
+  :root {
+    --bg: #F4F2F0; --card: #FFFFFF; --text: #1A1714; --dim: #6B625A; --line: #DAD4CE;
+    --accent: #2F6B4F;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131110; --card: #201D1A; --text: #EFEAE4; --dim: #A0968B; --line: #332E29;
+      --accent: #63C79A;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
+  h2 { font-size: 1.18rem; margin: 34px 0 8px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 7px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 20px; margin: 0 0 22px;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  blockquote {
+    margin: 0 0 16px; padding: 12px 16px; border-left: 3px solid var(--accent);
+    background: var(--card); border-radius: 0 10px 10px 0; color: var(--dim);
+  }
+  blockquote p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; font-size: 0.9em; }
+  footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--dim); font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Support</h1>
+  <p class="updated">Onbir · last updated 23 August 2026</p>
+
+  <div class="card">
+    <p>Anything at all — a player whose nationality or birth year is wrong, a constraint you
+    believe is impossible, a lost streak, a crash — write to
+    <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a>. For a data correction the
+    player's name and what is wrong is enough. For a bug, your device model and iOS version
+    gets it fixed much faster.</p>
+  </div>
+
+  <h2>How to play</h2>
+  <p>One constraint a day, the same one for everybody. Tap a position on the pitch, pick a
+  player, fill all eleven slots without breaking the constraint, then lock your XI in. The
+  formation changes with the day too, so the eleven slots are not always the same eleven
+  positions.</p>
+  <p>The full rulebook is inside the app: tap the <strong>?</strong> in the top right of the
+  masthead. It also opens by itself the first time you play.</p>
+
+  <h2>The constraint looks unfair</h2>
+  <p>It is, on purpose. The job is not to build the best XI — it is to build the least bad
+  XI under a bad rule. If the constraint were fair everybody would field the same eleven and
+  there would be nothing to argue about. Nobody gets an easier one: the sentence is derived
+  from the date, so your constraint today is everyone's constraint today.</p>
+
+  <h2>The Lock button will not press</h2>
+  <p>Then the squad still breaks the constraint, and the app says exactly which slots are at
+  fault — offending players are marked on the pitch and the reason is listed above the
+  button. Swap one of the marked players and the button lights up. If all eleven slots are
+  full and no violation is listed, check your device's date: the card is built from today's
+  date and a clock set to another day cannot produce one.</p>
+
+  <h2>My streak did not go up</h2>
+  <p>The streak is decided by the server, not by your phone, so that the same day cannot be
+  counted twice. If the app could not reach the server when you locked in, the streak stays
+  exactly where it was rather than counting a day it could not confirm — it does not
+  silently invent one. Play again on a connection and it settles.</p>
+  <p>Days are counted in Europe/Istanbul time, so "today" rolls over at midnight Turkish
+  time wherever you are.</p>
+
+  <h2>Does it work offline?</h2>
+  <p>Yes. The players, the constraints and the whole game are compiled into the app. With no
+  connection you can still build your XI, lock it in and produce your card. The only things
+  that need the network are the community numbers — how many people played today and how
+  rare your XI was — and when they are unavailable the app simply does not show them rather
+  than showing a broken panel.</p>
+
+  <h2>Where is the archive of past days?</h2>
+  <p>Your own boards are kept on the phone for seven days and then pruned; older days are
+  not replayable. This is deliberate — Onbir is a today game, and a backlog of thirty unplayed
+  constraints turns a two-minute habit into a chore.</p>
+
+  <h2>Sharing a card</h2>
+  <p>After you lock in, the card screen offers two ways out: share as a link, or share as an
+  image. The link encodes the squad itself — anyone who opens it sees the eleven you picked
+  and the constraint you picked them under, and nothing about you.</p>
+
+  <h2>A player's facts are wrong</h2>
+  <p>Write in and it gets fixed. The player table is plain text — name, position, birth year,
+  nationality and a one-line career note — and it is maintained by hand, so it is exactly the
+  kind of thing that carries mistakes. There are no player photos, club crests or federation
+  badges in the app, now or ever.</p>
+
+  <h2>How do I delete my data?</h2>
+  <p>Deleting the app removes everything on the phone. On the server there is one anonymous
+  row: a random device identifier with your streak and which days it played — no name, no
+  email, no IP address, nothing that points back to you. To have that row removed, write to
+  <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a>.</p>
+
+  <h2>Privacy</h2>
+  <p>No account, no advertising, no third-party analytics. The full statement is at
+  <a href="https://gurbuzer1.github.io/app-legal/onbir/privacy.html">the privacy page</a>.</p>
+
+  <footer>Onbir is made by Emre Gürbüzer.</footer>
+</main>
+</body>
+</html>

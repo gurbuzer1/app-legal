@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FloorStock — Destek</title>
+<style>
+  :root {
+    --bg: #F4F2F0; --card: #FFFFFF; --text: #1A1714; --dim: #6B625A; --line: #DAD4CE;
+    --accent: #0B5C86;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131110; --card: #201D1A; --text: #EFEAE4; --dim: #A0968B; --line: #332E29;
+      --accent: #63B7E4;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
+  h2 { font-size: 1.18rem; margin: 34px 0 8px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 7px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 20px; margin: 0 0 22px;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  blockquote {
+    margin: 0 0 16px; padding: 12px 16px; border-left: 3px solid var(--accent);
+    background: var(--card); border-radius: 0 10px 10px 0; color: var(--dim);
+  }
+  blockquote p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; font-size: 0.9em; }
+  footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--dim); font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Destek</h1>
+  <p class="updated">FloorStock · son güncelleme 23 Ağustos 2026</p>
+
+  <div class="card">
+    <p>Bir sayı tutmuyor, bir ekran ters çalışıyor ya da bir fikriniz mi var?
+    <a href="mailto:gurbuzer1@gmail.com?subject=FloorStock">gurbuzer1@gmail.com</a> adresine
+    yazın — hepsini okuyorum. Bir stok yanlış görünüyorsa malzemenin adı ve hareket
+    kaydındaki son satır yeter.</p>
+    <p><em>English: write to gurbuzer1@gmail.com. FloorStock is a Turkish-language
+    shop-floor consumables logbook that runs on a single device.</em></p>
+  </div>
+
+  <h2>Ne işe yarar</h2>
+  <p>Malzeme dolabından bir uç, bir eldiven ya da bir yağ alındığında bunu kimin ne zaman
+  aldığıyla birlikte kaydeder. Böylece sipariş listesi birinin hafızasına değil, gerçek
+  tüketime dayanır.</p>
+
+  <h2>Nasıl kullanılır?</h2>
+  <p>Dolabın başında <strong>Kiosk Modu</strong>'nu açın, malzemeyi kategorisinden seçin,
+  tek dokunuşla <strong>ALDIM</strong> deyin. Giriş yok, bekleme yok. Yönetim panelinde
+  kritik stok, tamamlama maliyeti ve hareket kaydı anında güncellenir.</p>
+
+  <h2>QR etiketler telefondaki uygulamada neden basılmıyor?</h2>
+  <p>Çünkü basılsa çalışmazdı. Telefondaki uygulamanın kendi adresi
+  <code>capacitor://localhost</code> ile başlar ve uygulama iOS'a böyle bir adresi
+  karşıladığını bildirmez. Bu adresi taşıyan bir QR kodunu hiçbir kamera uygulaması
+  açamaz — dolaba yapıştırılan etiket çalışan bir etikete benzer ama hiçbir şey açmaz.
+  Bir etiketin sessizce hiçbir şey yapması, etiket olmamasından kötüdür; bu yüzden
+  uygulama içinde QR üretilmiyor ve <strong>QR Etiketler</strong> ekranı telefonda
+  dolap/raf listesi gösteriyor.</p>
+  <p>FloorStock'u bir tarayıcıda açtığınız bilgisayar ya da tablette aynı ekran QR
+  kodlarını ve <strong>Yazdır</strong> tuşunu gösterir; oradan basılan etiket taranınca
+  kiosk ekranı doğrudan o malzemeyle açılır.</p>
+
+  <h2>Kayıtlar başka telefona geçer mi?</h2>
+  <p><strong>Hayır.</strong> Bu sürüm tek cihazda çalışır: iki telefonda iki ayrı envanter
+  olur. Paylaşımlı bir stok sistemi arıyorsanız bu sürüm onu yapmıyor, ve bunu kurmadan
+  önce bilmeniz gerekir. Bulut yedeği de yoktur.</p>
+
+  <h2>Kritik stok ne demek?</h2>
+  <p>Stok, o malzeme için belirlediğiniz <strong>minimum seviyeye indiğinde</strong> kritik
+  sayılır — altına inmesi beklenmez. Minimum seviye bir sipariş noktasıdır; oraya
+  vardığınızda sipariş verirsiniz, yoksa siparişi beklerken raf boşalır.</p>
+
+  <h2>"Tamamlama Maliyeti" neyi ölçüyor?</h2>
+  <p>Kritik kalemleri minimum seviyeye çıkarmanın bedelini. Bu sayı eksik büyüdükçe büyür.
+  Yerini aldığı ölçüm tam tersini yapıyordu: rafta <em>duran</em> malın değerini
+  topluyordu, yani tamamen biten bir kalem sıfır katkı veriyor ve başlık rakamı en düşük
+  değerini tam da üretim durduğu anda alıyordu.</p>
+
+  <h2>Bir kalemden elimdekinden fazlasını alırsam?</h2>
+  <p>Stok sıfırın altına inmez ve kayda <strong>gerçekten raftan çıkan miktar</strong>
+  yazılır, istenen miktar değil. Kayıt her zaman stoğu açıklar; ikisi birbirinden
+  ayrılmaz.</p>
+
+  <h2>İçindeki malzemeler gerçek mi?</h2>
+  <p>Başlangıçtaki 12 kalem <strong>örnek veridir</strong> — bir CNC atölyesi için
+  hazırlanmıştır, kimsenin gerçek envanteri değildir. Ana ekran bunu, envanter henüz
+  değişmemişken söyler ve siz kendi malzemenizi girdiğiniz anda susar. Yönetim panelinden
+  silip kendi listenizi girebilir, <strong>Demo Sıfırla</strong> ile örneklere
+  dönebilirsiniz.</p>
+
+  <h2>Çalışan PIN'i sorulmuyor</h2>
+  <p>Sorulmuyor, çünkü bu sürümde doğrulanmıyor. Kiosk ekranında kimlik <em>fizikseldir</em>:
+  dolabın başındasınız. Çalışan kaydındaki PIN alanı saklanır ama hiçbir yerde kontrol
+  edilmez — bunu bir erişim denetimi sanmayın.</p>
+
+  <h2>Çevrimdışı çalışır mı?</h2>
+  <p>Tamamen. Fabrika içinde şebeke olmaması hiçbir şeyi etkilemez; uygulama internete hiç
+  çıkmaz.</p>
+
+  <h2>Gizlilik</h2>
+  <p>Hiçbir veri toplanmıyor. Tam metin
+  <a href="https://gurbuzer1.github.io/app-legal/floorstock/privacy.html">gizlilik
+  sayfasında</a>.</p>
+
+  <footer>FloorStock'u Emre Gürbüzer yapıyor.</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recall — Support</title>
+<style>
+  :root {
+    --bg: #F5F3EE; --card: #FFFFFF; --text: #16181C; --dim: #5B6068; --line: #DCD8D0;
+    --accent: #1B4D8F; --right: #1F6B3A; --wrong: #A32222;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101418; --card: #191F26; --text: #F2F4F7; --dim: #A2AAB5; --line: #2B333C;
+      --accent: #7FB3F2; --right: #7DD69B; --wrong: #FF9A93;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
+  h2 { font-size: 1.18rem; margin: 38px 0 10px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 7px; }
+  .q {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 20px; margin: 0 0 14px;
+  }
+  .q h3 { margin: 0 0 8px; font-size: 1.02rem; }
+  .q p:last-child { margin-bottom: 0; }
+  code {
+    font: 0.9em ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--bg); border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px;
+  }
+  .yes { color: var(--right); font-weight: 700; }
+  .no { color: var(--wrong); font-weight: 700; }
+  footer { color: var(--dim); font-size: 0.92rem; margin-top: 46px; border-top: 1px solid var(--line); padding-top: 18px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Recall — support</h1>
+<p class="updated">Last updated 23 August 2026 · <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a></p>
+
+<p>
+  Ninety seconds, one question at a time, and you type the answer. Everything below is how
+  it actually works, not how it is meant to feel.
+</p>
+
+<h2>The marking</h2>
+
+<div class="q">
+  <h3>I typed the right country and it said I was wrong.</h3>
+  <p>
+    That is the one thing this app is built not to do, so please tell me about it —
+    <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a>, with the question and
+    exactly what you typed. There is one case where it is deliberate, below.
+  </p>
+</div>
+
+<div class="q">
+  <h3>What counts as a right answer?</h3>
+  <p>
+    Three things, in order. Accents, capitals, punctuation and a leading "the" are ignored,
+    so <code>cote divoire</code> and <code>Côte d'Ivoire</code> are the same answer. Then
+    any name that country is known by counts — <span class="yes">Turkey</span>,
+    <span class="yes">USA</span>, <span class="yes">UK</span>,
+    <span class="yes">Holland</span>, <span class="yes">Burma</span>, and 936 spellings in
+    all. Then a single-character slip is forgiven: one letter added, missing or wrong.
+  </p>
+</div>
+
+<div class="q">
+  <h3>So why was "Gambia" wrong when the answer was Zambia?</h3>
+  <p>
+    Because Gambia is a country. A slip is only forgiven when the corrected spelling could
+    only be one country — if what you typed is itself a real country's name, you named that
+    country rather than mistyping this one. The same goes for
+    <span class="no">Iran</span> when the answer is Iraq, and
+    <span class="no">Iceland</span> when it is Ireland.
+  </p>
+  <p>
+    A small number of near-misses are refused for the same reason even though they are not
+    real names: <span class="no">nigeri</span> sits exactly one letter from both Nigeria and
+    Niger, so there is no way to tell which was meant. That is about four in every thousand
+    possible slips. Every other one counts.
+  </p>
+</div>
+
+<div class="q">
+  <h3>Why is "Korea" not accepted?</h3>
+  <p>
+    Because there are two, and neither is called just "Korea" — they are South Korea and
+    North Korea. Type either and it counts. "Congo" is the case that looks the same and is
+    not: one of the two really is named Congo, so it is accepted for that one and not for
+    DR Congo.
+  </p>
+</div>
+
+<h2>The round</h2>
+
+<div class="q">
+  <h3>What does Pass do?</h3>
+  <p>
+    It sends the question to the back of the queue — it is not a skip. If the clock holds
+    out, it comes round again, and the top of the screen tells you how many are waiting.
+    Passing three early buys you speed now and hands you three hard ones at the end.
+  </p>
+</div>
+
+<div class="q">
+  <h3>The timer hit zero and the game kept going.</h3>
+  <p>
+    That is deliberate. A question already on screen when the clock stops is still yours to
+    answer; the round ends once you have finished it. The label changes to
+    "Time — last question" so you know which one it is.
+  </p>
+</div>
+
+<div class="q">
+  <h3>Why did I only see nine of the twenty-four questions?</h3>
+  <p>
+    Because ninety seconds is not long. The summary lists all twenty-four, including the
+    ones you never reached, so you can see what you missed.
+  </p>
+</div>
+
+<div class="q">
+  <h3>Can I make it easier?</h3>
+  <p>
+    Yes, on the home screen — four buttons under your record. They set how far into the
+    country table a round reaches, and each one is labelled with what it actually
+    contains rather than with an adjective: <code>Top 63</code>, <code>Top 90</code>,
+    <code>Top 125</code>, <code>All 179</code>. Those counts are read off the shipped
+    country table when the screen draws, so they cannot drift from the data.
+  </p>
+  <p>
+    "Top 63" means the 63 most populous countries and nothing outside them — 107 of the
+    297 questions. <code>All 179</code> is every country in the table, and it stays the
+    default: everyone who has played so far has played at that setting, and quietly
+    making the game easier on an update would change what their record means.
+  </p>
+</div>
+
+<div class="q">
+  <h3>Are the questions always the same?</h3>
+  <p>
+    No. There are 297 of them and a round deals 24, so two rounds in a row share about two
+    questions on average. Rounds get harder as they go, and "harder" is the country's rank
+    by population rather than a label someone chose.
+  </p>
+</div>
+
+<h2>The app</h2>
+
+<div class="q">
+  <h3>Does it work offline?</h3>
+  <p>
+    It only works offline, in the sense that it never goes online at all. There is no
+    network code in it. See the <a href="privacy.html">privacy page</a>.
+  </p>
+</div>
+
+<div class="q">
+  <h3>Is there anything to buy?</h3>
+  <p>
+    No. There is no paywall, no subscription, no adverts, and nothing locked.
+  </p>
+</div>
+
+<div class="q">
+  <h3>How do I turn off the buzz when an answer is marked?</h3>
+  <p>
+    Turn off Vibration in iOS Settings → Accessibility → Touch, or Haptics in Settings →
+    Sounds &amp; Haptics. The app honours both.
+  </p>
+</div>
+
+<div class="q">
+  <h3>Can I reset my record?</h3>
+  <p>
+    Delete and reinstall the app. The record is a single small file in the app's own
+    storage and goes with it; nothing is kept anywhere else.
+  </p>
+</div>
+
+<div class="q">
+  <h3>A fact in a question is wrong.</h3>
+  <p>
+    Please tell me which one. Every geography fact in the app is compiled from
+    <a href="https://github.com/mledoze/countries">mledoze/countries</a> and the World Bank
+    rather than typed by hand, so an error is either upstream or in how the question was
+    built, and both are worth fixing. It has happened once already: the source claimed Sri
+    Lanka borders India, which is a strait rather than a border, and that edge was dropped.
+  </p>
+</div>
+
+<footer>
+  Recall is made by Emre Gürbüzer.
+  Country data from mledoze/countries under the Open Database License, and from the World
+  Bank population indicator.
+</footer>
+
+</main>
+</body>
+</html>

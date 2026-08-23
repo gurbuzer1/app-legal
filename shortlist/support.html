@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shortlist — Support</title>
+<style>
+  :root {
+    --bg: #F4F4F1; --card: #FFFFFF; --text: #15171A; --dim: #585D63; --line: #D9DAD5;
+    --accent: #2F5D3A; --good: #1F6B3A; --poor: #A32222;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101211; --card: #1A1D1B; --text: #F0F2EE; --dim: #9EA5A0; --line: #2C312D;
+      --accent: #7FCB94; --good: #7DD69B; --poor: #FF9A93;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
+  h2 { font-size: 1.18rem; margin: 38px 0 10px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  .q {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 20px; margin: 0 0 14px;
+  }
+  .q h3 { margin: 0 0 8px; font-size: 1.02rem; }
+  .q p:last-child { margin-bottom: 0; }
+  table { border-collapse: collapse; margin: 0 0 14px; font-size: 0.96rem; }
+  td { padding: 3px 18px 3px 0; }
+  td.n { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+  code {
+    font: 0.9em ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--bg); border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px;
+  }
+  footer { color: var(--dim); font-size: 0.92rem; margin-top: 46px; border-top: 1px solid var(--line); padding-top: 18px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Shortlist — support</h1>
+<p class="updated">Last updated 23 August 2026 · <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a></p>
+
+<p>
+  Five hidden words. Ask for a letter, or answer. Everything below is how the game actually
+  works, not how it is meant to feel.
+</p>
+
+<h2>The count</h2>
+
+<div class="q">
+  <h3>What is the big number?</h3>
+  <p>
+    How many words still fit everything you know. Before you ask anything it is 8,636 for a
+    five-letter word — every five-letter word in the dictionary. Each letter you ask for
+    cuts it down.
+  </p>
+  <p>
+    It is counted, not estimated, against all <strong>46,977</strong> playable words in the
+    ENABLE dictionary. If it says 47, there are 47.
+  </p>
+</div>
+
+<div class="q">
+  <h3>Why does asking for a letter that is not there still help?</h3>
+  <p>
+    Because "no E anywhere" rules out every word containing an E, which is often more words
+    than a hit would rule out. A miss is not a wasted turn here — it is information, and the
+    count moves to prove it.
+  </p>
+</div>
+
+<div class="q">
+  <h3>The count did not move when I asked for a letter.</h3>
+  <p>
+    Then that letter told you nothing: every word still standing agreed about it. That can
+    happen, and it is worth knowing — it means you spent a letter for nothing, which is
+    exactly the kind of mistake the number exists to make visible.
+  </p>
+</div>
+
+<h2>The scoring</h2>
+
+<div class="q">
+  <h3>How are points worked out?</h3>
+  <p>
+    From how many words still fitted at the moment you answered — the doubt you removed
+    yourself:
+  </p>
+  <table>
+    <tr><td>1,024 words fit</td><td class="n">100</td></tr>
+    <tr><td>47 words fit</td><td class="n">56</td></tr>
+    <tr><td>8 words fit</td><td class="n">30</td></tr>
+    <tr><td>2 words fit</td><td class="n">10</td></tr>
+    <tr><td>1 word fits</td><td class="n">0</td></tr>
+  </table>
+  <p>
+    Reveal until one word fits and there is nothing left to be right about — the game
+    solved it and handed it to you.
+  </p>
+</div>
+
+<div class="q">
+  <h3>I solved it and got zero.</h3>
+  <p>
+    Then only one word still fitted. That is not a bug and it is not a punishment: you are
+    paid for the uncertainty you carried, and at that point there was none.
+  </p>
+</div>
+
+<div class="q">
+  <h3>Why does a wrong answer end the word?</h3>
+  <p>
+    Because otherwise guessing at every step would be free, and the count would be
+    decoration rather than a decision. The risk is what makes "answer now or ask again" a
+    real question.
+  </p>
+</div>
+
+<h2>The words</h2>
+
+<div class="q">
+  <h3>Where do the words come from?</h3>
+  <p>
+    Two lists, doing two different jobs. The <strong>ENABLE</strong> word list decides what
+    counts as a word: 172,823 words, of which the <strong>46,977</strong> that are five to
+    seven letters long are playable here, and those are what the count is measured
+    against. A frequency list decides what gets <em>hidden</em>: only the 4,000 most
+    common words, so the answer is always something you could have known.
+  </p>
+  <p>Both lists are public domain and compiled into the app before it ships.</p>
+</div>
+
+<div class="q">
+  <h3>I have never heard of a word it accepted as still fitting.</h3>
+  <p>
+    Likely true, and deliberate. The count has to be the truth about English rather than
+    the truth about a trimmed list, so obscure words are counted even though they are never
+    hidden. Telling you "12 words fit" while quietly meaning "12 words I judged you might
+    know" would make the number worthless.
+  </p>
+</div>
+
+<div class="q">
+  <h3>How long should a word take?</h3>
+  <p>
+    Measured over 400 words: <strong>typically 7 letters</strong> to be certain of, and
+    nine in ten are pinned down inside 11. If you are regularly needing more than that, you
+    are asking for letters that do not split the field — try one you expect about half the
+    remaining words to have.
+  </p>
+  <p>
+    Those are percentiles rather than a smallest-and-largest, deliberately: the extremes of
+    a sample move every time you take a different sample, and a number in a store listing
+    that changes depending on which words you happened to check is not a measurement.
+  </p>
+</div>
+
+<h2>The app</h2>
+
+<div class="q">
+  <h3>Does it work offline?</h3>
+  <p>
+    It only works offline, in the sense that it never goes online at all. There is no
+    network code in it. See the <a href="privacy.html">privacy page</a>.
+  </p>
+</div>
+
+<div class="q">
+  <h3>Is there anything to buy?</h3>
+  <p>No. No paywall, no subscription, no adverts, nothing locked.</p>
+</div>
+
+<div class="q">
+  <h3>Can I play it with VoiceOver?</h3>
+  <p>
+    Yes. Every tile announces itself — "letter 1: P", "letter 2: blank" — and every key on
+    the alphabet says which letter it asks for. If something is unreadable, please tell me;
+    that is a bug worth fixing.
+  </p>
+</div>
+
+<div class="q">
+  <h3>Can I reset my record?</h3>
+  <p>
+    Delete and reinstall the app. The record is a single small file in the app's own
+    storage and goes with it.
+  </p>
+</div>
+
+<footer>
+  Shortlist is made by Emre Gürbüzer. Word lists: the ENABLE word list and a public-domain
+  frequency list, both compiled into the app before release.
+</footer>
+
+</main>
+</body>
+</html>

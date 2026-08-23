@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outpace — Support</title>
+<style>
+  :root {
+    --bg: #F4F2F0; --card: #FFFFFF; --text: #1A1714; --dim: #6B625A; --line: #DAD4CE;
+    --accent: #2F6B4F;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131110; --card: #201D1A; --text: #EFEAE4; --dim: #A0968B; --line: #332E29;
+      --accent: #63C79A;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
+  h2 { font-size: 1.18rem; margin: 34px 0 8px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 7px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 20px; margin: 0 0 22px;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  blockquote {
+    margin: 0 0 16px; padding: 12px 16px; border-left: 3px solid var(--accent);
+    background: var(--card); border-radius: 0 10px 10px 0; color: var(--dim);
+  }
+  blockquote p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; font-size: 0.9em; }
+  footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--dim); font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Support</h1>
+  <p class="updated">Outpace &middot; last updated 23 August 2026</p>
+
+  <div class="card">
+    <p>Anything at all &mdash; a question you believe is wrong, a match that ended oddly, a
+    crash &mdash; write to <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a>. The
+    question and the three options are enough for me to find it.</p>
+  </div>
+
+  <h2>How to play</h2>
+  <p>One of you runs, one of you gives chase. Pick which pursuer you face, then build a pot
+  over eight opening questions. You are offered three positions on a seven-step board: more
+  money starts you closer to the pursuer, less money starts you further away. Get home before
+  they catch you and you play a twelve-question final for the pot.</p>
+
+  <h2>Every question has three answers, not four</h2>
+  <p>Because a blind guess should cost something. With three options a guess is one in three,
+  and the pursuer behind you is answering the same question.</p>
+
+  <h2>Which offer should I take?</h2>
+  <p>The game will not tell you, because that would be inventing a confidence it does not
+  have. What it does tell you plainly is the trade: the higher offer starts you closer to the
+  pursuer, and a harder pursuer makes every offer meaner.</p>
+
+  <h2>Are the pursuers actually different?</h2>
+  <p>Yes, and by a measured amount rather than a label. The test suite plays a weak player
+  against all five and reports the escape rate for each; across the five they run roughly
+  55, 50, 45, 38 and 16 per cent. They are ordered by that measurement, so a later pursuer is
+  never easier than an earlier one.</p>
+
+  <h2>Where do the questions come from?</h2>
+  <p>Four domains &mdash; geography, calendar, numbers and language &mdash; generated on your
+  phone from data that ships inside the download: country facts from the
+  <a href="https://github.com/mledoze/countries">mledoze/countries</a> dataset, World Bank
+  populations, and public-domain English word lists.</p>
+
+  <h2>The prizes</h2>
+  <p>Fictional. No money changes hands and there is nothing to exchange them for.</p>
+
+  <h2>Is there anything to buy?</h2>
+  <p>Not in this version &mdash; every pursuer is playable. If a version ever offers an
+  unlock and it does not appear after paying, Settings has a
+  <strong>Restore purchases</strong> button; if that does not fix it, write to me.</p>
+
+  <h2>Clearing your record</h2>
+  <p>Settings can erase your record without touching your preferences, and without deleting
+  the app.</p>
+
+  <h2>Does it need a connection?</h2>
+  <p>No. Everything happens on your phone. Aeroplane mode changes nothing.</p>
+
+  <h2>Privacy</h2>
+  <p>Nothing is collected. The full statement is on the
+  <a href="./privacy.html">privacy page</a>.</p>
+
+  <footer>Outpace is made by Emre G&uuml;rb&uuml;zer.</footer>
+</main>
+</body>
+</html>

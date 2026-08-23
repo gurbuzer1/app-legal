@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ground Truth — Privacy</title>
+<style>
+  :root {
+    --bg: #F4F2F0; --card: #FFFFFF; --text: #1A1714; --dim: #6B625A; --line: #DAD4CE;
+    --accent: #2F6B4F;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131110; --card: #201D1A; --text: #EFEAE4; --dim: #A0968B; --line: #332E29;
+      --accent: #63C79A;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
+  h2 { font-size: 1.18rem; margin: 38px 0 10px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 7px; }
+  .lede {
+    background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+    border-radius: 12px; padding: 18px 20px; margin: 0 0 10px;
+  }
+  .lede p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; font-size: 0.9em; }
+  footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--dim); font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy</h1>
+  <p class="updated">Ground Truth · last updated 23 August 2026</p>
+
+  <div class="lede">
+    <p><strong>Ground Truth collects nothing, sends nothing, and has nowhere to send it.</strong>
+    The app makes no network request at all. There is no account, no analytics, no crash
+    reporter, no advertising identifier, and no third-party SDK that could add one.</p>
+  </div>
+
+  <h2>What the app stores</h2>
+  <p>One entry, on your own device, in the storage the app is given for its own use. It is
+  written under the key <code>groundtruth.save.v1</code> and holds exactly three things:</p>
+  <ul>
+    <li>which puzzles you have solved, and how many attempts each one took;</li>
+    <li>which puzzle you opened last, so that <em>Continue</em> goes somewhere sensible;</li>
+    <li>one true-or-false flag recording whether the one-time unlock has been bought.</li>
+  </ul>
+  <p>That is the whole list. Nothing in it identifies you, none of it is transmitted
+  anywhere, and deleting the app removes it. There is no settings screen and no preference
+  file, because the app has no sound, no settings and nothing to configure.</p>
+
+  <h2>The purchase</h2>
+  <p>Ground Truth sells one thing: a single, one-time unlock of the puzzles after the free
+  opening chapter. It is not a subscription and it does not renew. The purchase is handled
+  entirely by Apple through the App Store. Apple tells the app the localised price and
+  whether the unlock is owned; that is everything the app learns. Your name, your payment
+  details and your Apple Account are never visible to it, and no receipt is sent anywhere
+  by us because there is nowhere to send one.</p>
+
+  <h2>Where the puzzles come from</h2>
+  <p>Every puzzle, source card, wrong-answer explanation and closing line is written by hand
+  and compiled into the app before it ships. Nothing you tap is sent to a language model, and
+  no puzzle is generated while you play. The app behaves identically with the aeroplane
+  switch on, because it never had a connection to lose.</p>
+
+  <h2>Permissions</h2>
+  <p>None are requested, because none are used. The app asks for no location, no contacts,
+  no photos, no camera, no microphone, no notifications, and no tracking permission. There is
+  no permission prompt anywhere in it.</p>
+
+  <h2>Children</h2>
+  <p>The app is suitable for all ages. There is no chat, no user-generated content, no
+  browser and no advertising. Since nothing is collected from anybody, nothing is collected
+  from children either.</p>
+
+  <h2>Third parties</h2>
+  <p>None. No advertising network, no analytics provider, no cloud backend. The app has no
+  server component, so there is no operator to whom your data could be disclosed and no
+  breach that could expose it.</p>
+
+  <h2>Your rights</h2>
+  <p>Rights to access, correct, export or erase personal data — under the UK GDPR, the EU
+  GDPR, or the CCPA — apply to data a company holds about you. No such data exists here.
+  Everything the app has ever written is on your device: deleting the app deletes all of it.</p>
+
+  <h2>Changes</h2>
+  <p>If a future version ever collects or sends anything, this page will say so plainly and
+  will be updated before that version reaches the store.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a></p>
+
+  <footer>Ground Truth is made by Emre Gürbüzer. ·
+    <a href="https://gurbuzer1.github.io/app-legal/groundtruth/support.html">Support</a></footer>
+</main>
+</body>
+</html>

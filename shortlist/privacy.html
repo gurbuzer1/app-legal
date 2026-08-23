@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ballpark — Privacy</title>
+<title>Shortlist — Privacy</title>
 <style>
   :root {
-    --bg: #F6F3EE; --card: #FFFFFF; --text: #17150F; --dim: #5E5850; --line: #DDD6CB;
-    --accent: #8A4B14;
+    --bg: #F4F4F1; --card: #FFFFFF; --text: #15171A; --dim: #585D63; --line: #D9DAD5;
+    --accent: #2F5D3A;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #12100E; --card: #1D1A16; --text: #F3EFE8; --dim: #A79E92; --line: #332E28;
-      --accent: #E39A4E;
+      --bg: #101211; --card: #1A1D1B; --text: #F0F2EE; --dim: #9EA5A0; --line: #2C312D;
+      --accent: #7FCB94;
     }
   }
   * { box-sizing: border-box; }
@@ -28,14 +28,13 @@
   ul { margin: 0 0 14px; padding-left: 1.3em; }
   li { margin-bottom: 7px; }
   .lede {
-    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
-    padding: 20px 22px; margin: 0 0 30px; font-size: 1.06rem;
+    background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+    border-radius: 12px; padding: 18px 20px; margin: 0 0 10px;
   }
-  .lede strong { color: var(--accent); }
+  .lede p:last-child { margin-bottom: 0; }
   code {
     font: 0.9em ui-monospace, SFMono-Regular, Menlo, monospace;
-    background: var(--card); border: 1px solid var(--line); border-radius: 5px;
-    padding: 1px 5px;
+    background: var(--card); border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px;
   }
   footer { color: var(--dim); font-size: 0.92rem; margin-top: 46px; border-top: 1px solid var(--line); padding-top: 18px; }
   a { color: var(--accent); }
@@ -45,32 +44,27 @@
 <main>
 
 <h1>Privacy</h1>
-<p class="updated">Ballpark · last updated 23 August 2026</p>
+<p class="updated">Shortlist · last updated 23 August 2026</p>
 
-<p class="lede">
-  <strong>Ballpark collects nothing, sends nothing, and has no way to.</strong>
+<div class="lede">
+  <p>
+  <strong>Shortlist collects nothing, sends nothing, and has no way to.</strong>
   The app makes no network requests at all. There is no account, no analytics, no
-  advertising, and no third-party code that could carry anything off the device.
-</p>
+  advertising, and no third-party code that could carry anything off the device.</p>
+</div>
 
 <h2>What the app stores</h2>
-<p>
-  One small file on your phone, and only these things go in it:
-</p>
+<p>One small file on your phone, and only these things go in it:</p>
 <ul>
   <li>how many rounds you have played;</li>
   <li>your best single round;</li>
-  <li>your totals — points scored and questions answered, for the average;</li>
-  <li>how many single guesses landed within a tenth of the truth, which is the one
-      count of skill in the record;</li>
-  <li>whether you have turned haptic feedback off;</li>
-  <li>which clock you chose — no clock, four seconds a question, or two — so that the
-      choice is still there next time you open the app.</li>
+  <li>your totals — points scored and words solved, for the average;</li>
+  <li>whether you have turned haptic feedback off.</li>
 </ul>
 <p>
-  Nothing else. Not the questions you were asked, not the numbers you guessed, not when you
-  played.
-  The file lives in the app's own storage, is never uploaded, and is deleted with the app.
+  Nothing else. Not the words you were given, not the letters you asked for, not what you
+  typed, not when you played. The file lives in the app's own storage, is never uploaded,
+  and is deleted with the app.
 </p>
 
 <h2>What the app does not do</h2>
@@ -90,24 +84,23 @@
   <code>fetch</code>, <code>XMLHttpRequest</code>, <code>WebSocket</code>,
   <code>EventSource</code>, <code>sendBeacon</code>, any <code>http://</code> or
   <code>https://</code> address, or a dependency whose name matches any of the common
-  analytics, advertising or crash-reporting libraries. That script runs before a release
-  is prepared, and the claim on this page is derived from its result rather than the other
-  way round.
+  analytics, advertising or crash-reporting libraries. That script runs before a release is
+  prepared, and the claim on this page is derived from its result rather than the other way
+  round.
 </p>
 
-<h2>Where the questions come from</h2>
+<h2>Where the words come from</h2>
 <p>
-  The figures are compiled into the app before it ships and are never fetched. They come
-  from <a href="https://github.com/mledoze/countries">mledoze/countries</a>, under the Open
-  Database License, and from two World Bank indicators — population (SP.POP.TOTL) and GDP
-  per capita (NY.GDP.PCAP.CD). Neither source is contacted at runtime; both are read once,
-  on a build machine, into a table inside the app.
+  The word lists are compiled into the app before it ships and are never fetched: the
+  ENABLE word list, which decides what counts as a word, and a frequency list, which
+  decides which words are hidden. Both are public domain. Neither is contacted at runtime;
+  both are read once, on a build machine, into a table inside the app.
 </p>
 
 <h2>Children</h2>
 <p>
-  Ballpark is rated 4+ and is safe for children for the simple reason that it has no way to
-  reach anything. There is nothing to buy, nobody to talk to, and no data to collect.
+  Shortlist is rated 4+ and is safe for children for the simple reason that it has no way
+  to reach anything. There is nothing to buy, nobody to talk to, and no data to collect.
 </p>
 
 <h2>Changes</h2>
@@ -123,7 +116,7 @@
 </p>
 
 <footer>
-  Ballpark is made by Emre Gürbüzer. This page is served as a static file and sets no
+  Shortlist is made by Emre Gürbüzer. This page is served as a static file and sets no
   cookies.
 </footer>
 

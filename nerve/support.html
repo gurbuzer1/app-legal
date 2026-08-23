@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nerve — Support</title>
+<style>
+  :root {
+    --bg: #F4F2F0; --card: #FFFFFF; --text: #1A1714; --dim: #6B625A; --line: #DAD4CE;
+    --accent: #2F6B4F;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131110; --card: #201D1A; --text: #EFEAE4; --dim: #A0968B; --line: #332E29;
+      --accent: #63C79A;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
+  h2 { font-size: 1.18rem; margin: 34px 0 8px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 7px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 20px; margin: 0 0 22px;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  blockquote {
+    margin: 0 0 16px; padding: 12px 16px; border-left: 3px solid var(--accent);
+    background: var(--card); border-radius: 0 10px 10px 0; color: var(--dim);
+  }
+  blockquote p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; font-size: 0.9em; }
+  footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--dim); font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Support</h1>
+  <p class="updated">Nerve &middot; last updated 23 August 2026</p>
+
+  <div class="card">
+    <p>Anything at all &mdash; a question you believe is wrong, a rung that behaved oddly, a
+    crash &mdash; write to <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a>. If
+    it is about a question, the country and the four options are enough for me to find it.</p>
+  </div>
+
+  <h2>How to play</h2>
+  <p>Fifteen rungs, four options each, two safety nets. Answer correctly and you climb;
+  answer wrongly and you fall back to the last net you passed. Before every rung you may
+  stop instead and keep what you have.</p>
+
+  <h2>What the line above the options means</h2>
+  <p>It is the whole game. Before each rung Nerve tells you exactly how sure you would have
+  to be for answering to beat walking away:</p>
+  <blockquote><p>You would need to be 47% sure. A blind guess is 25%.</p></blockquote>
+  <p>That is arithmetic, not advice. It compares what stopping now is worth against the
+  average of climbing and falling, and it makes no claim about what you should do.</p>
+
+  <h2>Three rungs say 0%</h2>
+  <p>Because on those three a wrong answer costs you nothing &mdash; you are standing on a
+  safety net, or below the first one. The sentence still states the number rather than
+  merely implying it, on every rung including the free ones, because the number is the point
+  and it should be readable before it costs anything to misread.</p>
+
+  <h2>Are the later rungs really harder?</h2>
+  <p>Yes, and it is a fact about the data rather than a label somebody typed. Each rung
+  draws its country from a harder slice of a list ordered by population, and the slices do
+  not overlap: 179 countries across 15 bands of 11 or 12. The test suite walks every band to
+  check they stay separated.</p>
+
+  <h2>Why aren't the wrong options obviously wrong?</h2>
+  <p>The classic way to ruin a hard question is to take the answer from a hard band and the
+  wrong options from anywhere &mdash; "the capital of Kazakhstan" against Paris, Tokyo and
+  Cairo is a reading test. Here every option on a rung comes from that rung's own band. Three
+  thousand generated questions are checked for it before any of this ships.</p>
+
+  <h2>What is kept between sessions</h2>
+  <p>Five numbers: climbs finished, your best amount kept, the highest rung you have
+  answered, how many climbs you walked away from, and how many reached the top. Nothing else,
+  and nothing leaves the phone. A climb in progress is not saved &mdash; a restored ladder
+  with an option half-chosen would throw away the pause that is the format.</p>
+
+  <h2>Does it need a connection?</h2>
+  <p>No, and it never will. Everything happens on your phone. Aeroplane mode changes nothing.</p>
+
+  <h2>Is there anything to buy?</h2>
+  <p>No. There is no in-app purchase, no subscription and no advertising. The prizes on the
+  ladder are points and nothing else.</p>
+
+  <h2>Privacy</h2>
+  <p>Nothing is collected. The full statement is on the
+  <a href="./privacy.html">privacy page</a>.</p>
+
+  <footer>Nerve is made by Emre G&uuml;rb&uuml;zer.</footer>
+</main>
+</body>
+</html>

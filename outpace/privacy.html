@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outpace — Privacy</title>
+<style>
+  :root {
+    --bg: #F4F2F0; --card: #FFFFFF; --text: #1A1714; --dim: #6B625A; --line: #DAD4CE;
+    --accent: #2F6B4F;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131110; --card: #201D1A; --text: #EFEAE4; --dim: #A0968B; --line: #332E29;
+      --accent: #63C79A;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
+  h2 { font-size: 1.18rem; margin: 38px 0 10px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 7px; }
+  .lede {
+    background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+    border-radius: 12px; padding: 18px 20px; margin: 0 0 10px;
+  }
+  .lede p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--dim); font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy</h1>
+  <p class="updated">Outpace &middot; last updated 23 August 2026</p>
+
+  <div class="lede">
+    <p><strong>Outpace collects nothing, sends nothing, and has nowhere to send it.</strong>
+    The app makes no network requests at all. There is no account, no sign-in, no analytics,
+    no crash reporter, no advertising identifier, and no third-party SDK that could add one.</p>
+  </div>
+
+  <h2>What the app stores</h2>
+  <p>Two things, both on your own device, in the storage iOS gives the app for its own use:</p>
+  <ul>
+    <li><strong>Your preferences</strong> &mdash; the appearance setting and whether the
+    phone buzzes when you answer.</li>
+    <li><strong>Your record</strong> &mdash; which pursuers you have got home against, your
+    best prize, and how many matches you have finished.</li>
+  </ul>
+  <p>Nothing in that list identifies you and none of it is transmitted anywhere. Deleting the
+  app removes it, and Settings can erase the record on its own without touching your
+  preferences.</p>
+
+  <h2>What is in the app already</h2>
+  <p>Every question is built on your phone from data compiled into the download: country
+  facts from the <a href="https://github.com/mledoze/countries">mledoze/countries</a> dataset
+  under the ODC Open Database License, World Bank populations, and public-domain English word
+  lists. Nothing is fetched while you play, which is why the game works in aeroplane mode.</p>
+
+  <h2>The prizes are not money</h2>
+  <p>The figures in a match are fictional. No money changes hands, there is no gambling
+  simulation, and nothing in the game can be exchanged for anything.</p>
+
+  <h2>Permissions</h2>
+  <p>None are requested: no location, no contacts, no camera, no microphone, no photo
+  library, no notifications, no identifier for advertisers.</p>
+
+  <h2>Purchases</h2>
+  <p>There is nothing to buy in this version. The app links Apple's StoreKit and asks the App
+  Store on launch whether an optional unlock is available; no such product exists yet, so
+  nothing is offered, nothing is locked, and every pursuer is playable. If that unlock is
+  ever published it will be a one-off, non-consumable purchase handled entirely by Apple: the
+  app would never see your payment method, your Apple ID or your name, only whether the
+  product is owned. Apple's own privacy policy governs any such transaction.</p>
+
+  <h2>Children</h2>
+  <p>Outpace is suitable for all ages. There is no chat, no user-generated content, no
+  browser and no external links inside the app. Since nothing is collected from anybody,
+  nothing is collected from children either.</p>
+
+  <h2>Third parties</h2>
+  <p>None beyond Apple's App Store. No advertising network, no analytics package, no crash
+  reporter, no social sign-in, no cloud backend. The app has no server component, so there is
+  no operator to whom your data could be disclosed and no breach that could expose it.</p>
+
+  <h2>Your rights</h2>
+  <p>Rights to access, correct, export or erase personal data &mdash; under the UK GDPR, the
+  EU GDPR, or the CCPA &mdash; apply to data a company holds about you. No such data exists
+  here. Everything the app has ever written is on your device: deleting the app deletes all
+  of it.</p>
+
+  <h2>Changes</h2>
+  <p>If a future version ever collects anything, this page will say so plainly before that
+  version is released, and the App Store privacy label will be updated to match.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a></p>
+
+  <footer>Outpace is made by Emre G&uuml;rb&uuml;zer. It is an original game, not affiliated
+  with, endorsed by or derived from any television programme, broadcaster or licensed
+  format.</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sift — Support</title>
+<style>
+  :root {
+    --bg: #F4F2F0; --card: #FFFFFF; --text: #1A1714; --dim: #6B625A; --line: #DAD4CE;
+    --accent: #2F6B4F;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131110; --card: #201D1A; --text: #EFEAE4; --dim: #A0968B; --line: #332E29;
+      --accent: #63C79A;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
+  h2 { font-size: 1.18rem; margin: 34px 0 8px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 7px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 20px; margin: 0 0 22px;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  blockquote {
+    margin: 0 0 16px; padding: 12px 16px; border-left: 3px solid var(--accent);
+    background: var(--card); border-radius: 0 10px 10px 0; color: var(--dim);
+  }
+  blockquote p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; font-size: 0.9em; }
+  footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--dim); font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Support</h1>
+  <p class="updated">Sift &middot; last updated 23 August 2026</p>
+
+  <div class="card">
+    <p>Anything at all &mdash; a grouping you believe is wrong, a board that looked
+    impossible, a crash, a purchase that did not restore &mdash; write to
+    <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a>. If it is about a board, the
+    four tiles you picked are enough for me to find it.</p>
+  </div>
+
+  <h2>How to play</h2>
+  <p>Sixteen tiles, four hidden rules, four tiles each. Pick four you think share a rule and
+  submit. Wrong guesses are limited; how many is yours to set in Settings.</p>
+
+  <h2>I picked four things that clearly go together and it said no</h2>
+  <p>Then they share a rule that is not one of <em>this</em> board's four. Sift says so
+  rather than just buzzing:</p>
+  <blockquote><p>Those do share a rule &mdash; just not one of this board's four.</p></blockquote>
+  <p>That is the difficulty on purpose. Some tiles fit two rules, and only one grouping of
+  all sixteen works.</p>
+
+  <h2>"One away"</h2>
+  <p>Three of your four belong to one rule and the fourth does not. It tells you the shape of
+  the mistake without telling you which tile is the intruder.</p>
+
+  <h2>What "Naming the rule" adds</h2>
+  <p>When four tiles you pick share a rule that is not on the board, Sift already tells you
+  so. The purchase adds the next sentence: <em>which</em> rule it was. That is all it does.
+  Every board, unlimited play, and the full reveal of all four rules at the end of a board
+  are free and stay free.</p>
+  <p>It is a one-off, non-consumable purchase. If you have bought it before, Settings has a
+  <strong>Restore purchases</strong> button.</p>
+
+  <h2>Nothing about the purchase appears on my screen</h2>
+  <p>That is deliberate, not a failure to load. The unlock is only ever offered when the App
+  Store confirms it is actually for sale. When the store cannot be reached &mdash; offline,
+  signed out, or a sandbox where the product does not resolve &mdash; the app shows nothing
+  about it at all rather than a padlock you cannot open.</p>
+
+  <h2>Are the boards fair?</h2>
+  <p>Every board is checked before it is dealt, not promised. The grouping of all sixteen
+  tiles has to be the only one that works, and a board that fails is discarded and another is
+  drawn.</p>
+
+  <h2>I closed the app mid-board</h2>
+  <p>It comes back. The board is stored as its number and the tiles still on it, and rebuilt
+  on your phone from that number. If a future version changes how boards are generated, the
+  saved board would no longer describe a real board &mdash; so the app re-derives it on load
+  and throws the save away rather than showing you something that never existed.</p>
+
+  <h2>Does it need a connection?</h2>
+  <p>No. Everything happens on your phone; the word list and country table ship inside the
+  download. Aeroplane mode changes nothing except that the store cannot be asked about the
+  optional purchase.</p>
+
+  <h2>Privacy</h2>
+  <p>Nothing is collected. The full statement is on the
+  <a href="./privacy.html">privacy page</a>.</p>
+
+  <footer>Sift is made by Emre G&uuml;rb&uuml;zer.</footer>
+</main>
+</body>
+</html>
