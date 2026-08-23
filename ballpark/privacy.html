@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ballpark — Privacy</title>
+<style>
+  :root {
+    --bg: #F6F3EE; --card: #FFFFFF; --text: #17150F; --dim: #5E5850; --line: #DDD6CB;
+    --accent: #8A4B14;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12100E; --card: #1D1A16; --text: #F3EFE8; --dim: #A79E92; --line: #332E28;
+      --accent: #E39A4E;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
+  h2 { font-size: 1.18rem; margin: 38px 0 10px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 7px; }
+  .lede {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 20px 22px; margin: 0 0 30px; font-size: 1.06rem;
+  }
+  .lede strong { color: var(--accent); }
+  code {
+    font: 0.9em ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--card); border: 1px solid var(--line); border-radius: 5px;
+    padding: 1px 5px;
+  }
+  footer { color: var(--dim); font-size: 0.92rem; margin-top: 46px; border-top: 1px solid var(--line); padding-top: 18px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Privacy</h1>
+<p class="updated">Ballpark · last updated 22 August 2026</p>
+
+<p class="lede">
+  <strong>Ballpark collects nothing, sends nothing, and has no way to.</strong>
+  The app makes no network requests at all. There is no account, no analytics, no
+  advertising, and no third-party code that could carry anything off the device.
+</p>
+
+<h2>What the app stores</h2>
+<p>
+  One small file on your phone, and only these things go in it:
+</p>
+<ul>
+  <li>how many rounds you have played;</li>
+  <li>your best single round;</li>
+  <li>your totals — points scored and questions answered, for the average;</li>
+  <li>whether you have turned haptic feedback off.</li>
+</ul>
+<p>
+  Nothing else. Not the questions you were asked, not the numbers you guessed, not when you
+  played.
+  The file lives in the app's own storage, is never uploaded, and is deleted with the app.
+</p>
+
+<h2>What the app does not do</h2>
+<ul>
+  <li>No network requests. Not on launch, not during a round, not ever.</li>
+  <li>No analytics, crash reporting, or attribution SDK.</li>
+  <li>No adverts and no ad identifier.</li>
+  <li>No account, sign-in, email address, or contact details.</li>
+  <li>No access to your contacts, photos, location, microphone, or camera.</li>
+  <li>No purchases. There is nothing to buy, so there is no payment data.</li>
+</ul>
+
+<h2>Why you can believe that</h2>
+<p>
+  Because it is checked mechanically rather than promised. The repository carries a script
+  that reads every source file the app actually ships and fails if it finds
+  <code>fetch</code>, <code>XMLHttpRequest</code>, <code>WebSocket</code>,
+  <code>EventSource</code>, <code>sendBeacon</code>, any <code>http://</code> or
+  <code>https://</code> address, or a dependency whose name matches any of the common
+  analytics, advertising or crash-reporting libraries. That script runs before a release
+  is prepared, and the claim on this page is derived from its result rather than the other
+  way round.
+</p>
+
+<h2>Where the questions come from</h2>
+<p>
+  The figures are compiled into the app before it ships and are never fetched. They come
+  from <a href="https://github.com/mledoze/countries">mledoze/countries</a>, under the Open
+  Database License, and from two World Bank indicators — population (SP.POP.TOTL) and GDP
+  per capita (NY.GDP.PCAP.CD). Neither source is contacted at runtime; both are read once,
+  on a build machine, into a table inside the app.
+</p>
+
+<h2>Children</h2>
+<p>
+  Ballpark is rated 4+ and is safe for children for the simple reason that it has no way to
+  reach anything. There is nothing to buy, nobody to talk to, and no data to collect.
+</p>
+
+<h2>Changes</h2>
+<p>
+  If a future version ever collected anything, this page would say so before that version
+  shipped, and the App Store privacy labels would change with it. As of this version the
+  answer to every question on Apple's privacy questionnaire is "no data collected".
+</p>
+
+<h2>Contact</h2>
+<p>
+  Questions about this policy: <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a>.
+</p>
+
+<footer>
+  Ballpark is made by Emre Gürbüzer. This page is served as a static file and sets no
+  cookies.
+</footer>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Whittle — Support</title>
+<style>
+  :root {
+    --bg: #F4F2F0; --card: #FFFFFF; --text: #1A1714; --dim: #6B625A; --line: #DAD4CE;
+    --accent: #2F6B4F;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131110; --card: #201D1A; --text: #EFEAE4; --dim: #A0968B; --line: #332E29;
+      --accent: #63C79A;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
+  h2 { font-size: 1.18rem; margin: 34px 0 8px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 7px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 20px; margin: 0 0 22px;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  blockquote {
+    margin: 0 0 16px; padding: 12px 16px; border-left: 3px solid var(--accent);
+    background: var(--card); border-radius: 0 10px 10px 0; color: var(--dim);
+  }
+  blockquote p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; font-size: 0.9em; }
+  footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--dim); font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Support</h1>
+  <p class="updated">Whittle · last updated 22 August 2026</p>
+
+  <div class="card">
+    <p>Anything at all — a clue you believe is wrong, a board that looked unsolvable, a
+    crash — write to <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a>. If it is
+    about a clue, the country and the sentence are enough for me to find the board.</p>
+  </div>
+
+  <h2>How to play</h2>
+  <p>Eight countries and four clues. Exactly one of the eight satisfies every clue. Tap a
+  country you think is out, then tap the clue that rules it out. Both halves have to be
+  right, and three wrong moves end the board.</p>
+
+  <h2>I tapped the right country and was still marked wrong</h2>
+  <p>Then the clue was the wrong reason. The game says which:</p>
+  <blockquote><p>That clue is true of Peru, so it is not the reason to strike it.</p></blockquote>
+  <p>Peru may well be out — but not <em>because</em> of that sentence. Any clue that
+  genuinely rules the country out is accepted, not one particular "intended" answer. A
+  country that fails two clues can be struck with either.</p>
+
+  <h2>Why can't I just name the answer?</h2>
+  <p>Because then you could win without doing the reasoning. Naming the survivor of eight
+  is a one-in-eight guess; eliminating seven, each with the right reason out of four, is
+  not. Striking at random wins about one board in 777 — that figure is computed exactly
+  from the board rather than estimated, and the test suite plays 100,000 clueless runs to
+  check the two agree.</p>
+
+  <h2>Is every clue actually needed?</h2>
+  <p>Yes, and it is checked before the board is dealt rather than promised. Each clue is
+  the <em>sole</em> reason that some country on your screen falls: remove it and that
+  country survives alongside the answer. Four things are proved by exhaustion over all 179
+  countries — the answer is unique in the whole table, every clue is a sole executioner,
+  every decoy is killed by a clue that is shown, and at most one clue is the demanding
+  kind. A board that fails any of them is discarded and another is drawn.</p>
+
+  <h2>Some clues need me to know populations and areas</h2>
+  <p>At most one of the four ever does, by design. Comparisons are also never close: the
+  generator refuses any comparison where the two quantities are within a factor of two, so
+  a comparative clue is never a coin flip. "Larger than Ghana" is meant to be settleable;
+  "larger than Uganda" would not be.</p>
+
+  <h2>Where do the facts come from?</h2>
+  <p>Open data compiled into the app, never typed by hand: the
+  <a href="https://github.com/mledoze/countries">mledoze/countries</a> dataset under the ODC
+  Open Database License for names, capitals, regions, areas, land borders and currencies,
+  and World Bank indicator <code>SP.POP.TOTL</code> for populations. Two upstream errors are
+  corrected in the build — a one-sided claim that Sri Lanka borders India, and borders
+  pointing at countries the table does not contain.</p>
+
+  <h2>Does it need a connection?</h2>
+  <p>No, and it never will. Everything happens on your phone. Aeroplane mode changes
+  nothing.</p>
+
+  <h2>Privacy</h2>
+  <p>Nothing is collected. The full statement is at
+  <a href="https://gurbuzer.dev/whittle/privacy">gurbuzer.dev/whittle/privacy</a>.</p>
+
+  <footer>Whittle is made by Emre Gürbüzer.</footer>
+</main>
+</body>
+</html>

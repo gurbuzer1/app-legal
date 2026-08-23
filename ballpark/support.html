@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ballpark — Support</title>
+<style>
+  :root {
+    --bg: #F6F3EE; --card: #FFFFFF; --text: #17150F; --dim: #5E5850; --line: #DDD6CB;
+    --accent: #8A4B14; --good: #1F6B3A; --poor: #A32222;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12100E; --card: #1D1A16; --text: #F3EFE8; --dim: #A79E92; --line: #332E28;
+      --accent: #E39A4E; --good: #7DD69B; --poor: #FF9A93;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
+  h2 { font-size: 1.18rem; margin: 38px 0 10px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 7px; }
+  .q {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 20px; margin: 0 0 14px;
+  }
+  .q h3 { margin: 0 0 8px; font-size: 1.02rem; }
+  .q p:last-child { margin-bottom: 0; }
+  table { border-collapse: collapse; margin: 0 0 14px; font-size: 0.96rem; }
+  td { padding: 3px 18px 3px 0; }
+  td.n { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+  code {
+    font: 0.9em ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--bg); border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px;
+  }
+  footer { color: var(--dim); font-size: 0.92rem; margin-top: 46px; border-top: 1px solid var(--line); padding-top: 18px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Ballpark — support</h1>
+<p class="updated">Last updated 22 August 2026 · <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a></p>
+
+<p>
+  Eight questions, no clock. You slide to a number and commit. Everything below is how the
+  game actually works, not how it is meant to feel.
+</p>
+
+<h2>The scoring</h2>
+
+<div class="q">
+  <h3>How is my guess scored?</h3>
+  <p>
+    By the <strong>factor</strong> you were out by, never the difference:
+  </p>
+  <table>
+    <tr><td>exactly right</td><td class="n">100</td></tr>
+    <tr><td>within 5%</td><td class="n">98</td></tr>
+    <tr><td>within 10%</td><td class="n">96</td></tr>
+    <tr><td>out by 2×</td><td class="n">70</td></tr>
+    <tr><td>out by 3×</td><td class="n">52</td></tr>
+    <tr><td>out by 5×</td><td class="n">30</td></tr>
+    <tr><td>out by 10× or more</td><td class="n">0</td></tr>
+  </table>
+  <p>
+    It makes no difference whether the answer was eleven thousand or a billion. Being out
+    by three is being out by three.
+  </p>
+</div>
+
+<div class="q">
+  <h3>Why not just score the difference?</h3>
+  <p>
+    Because it produces nonsense. Guessing two million when the answer is one million and
+    guessing 101 million when the answer is 100 million are both "a million out" — but the
+    first is twice the right answer and the second is essentially correct. Worse: a guess a
+    <em>thousand</em> times too big on a small country is a smaller difference than a guess
+    one percent off on a large one, so difference-based scoring would call the wild guess
+    the better of the two.
+  </p>
+</div>
+
+<div class="q">
+  <h3>I guessed too low and got the same score as someone who guessed too high.</h3>
+  <p>
+    Yes, deliberately. Twice the answer and half the answer are the same size of error. The
+    televised format this comes from kills you for going over and forgives you for going
+    under; that is good television and a poor measure of what anyone knows.
+  </p>
+</div>
+
+<h2>The slider</h2>
+
+<div class="q">
+  <h3>Why does the slider move so fast at the top?</h3>
+  <p>
+    It does not — it moves at the same <em>rate</em> everywhere, and the rate is a ratio.
+    Every point of travel multiplies the number by the same amount, which is why the marks
+    underneath are 1, 10, 100, 1k and so on rather than evenly spaced numbers. A linear
+    slider across a billion would spend nine tenths of its travel on the last order of
+    magnitude and squeeze every small answer into a few pixels.
+  </p>
+</div>
+
+<div class="q">
+  <h3>I cannot get the exact number I want.</h3>
+  <p>
+    The slider resolves to about 8% per point of travel on the smallest phone, which is far
+    finer than anyone's intuition about the area of Chad — and a guess 8% out still scores
+    96. If you find a case where that costs you a point you had earned, please say so.
+  </p>
+</div>
+
+<div class="q">
+  <h3>Does the slider's range give the answer away?</h3>
+  <p>
+    It is not allowed to. The range is a property of the <em>kind</em> of question and is
+    identical for every country, and every one of the 768 answers is checked to sit well
+    away from both ends. Monaco failed that check while it was being built — 2km² sat too
+    near the start of a slider beginning at 1km² — and the range was widened.
+  </p>
+</div>
+
+<h2>The questions</h2>
+
+<div class="q">
+  <h3>Where do the numbers come from?</h3>
+  <p>
+    Population and GDP per capita from the World Bank; area and country names from
+    <a href="https://github.com/mledoze/countries">mledoze/countries</a> under the Open
+    Database Licence. Population density is those two divided, and says so. Nothing is
+    typed by hand — every figure is compiled from a source file before the app ships, which
+    is why each answer can show you where it came from.
+  </p>
+</div>
+
+<div class="q">
+  <h3>Why does it show a year?</h3>
+  <p>
+    Because a figure without one is not a fact. The World Bank's most recent GDP per capita
+    is 2025 for most countries and as old as 2011 for a few, so "GDP per capita in Syria is
+    $1,266" is false while "in 2011 it was $1,266" is true.
+  </p>
+</div>
+
+<div class="q">
+  <h3>Some questions feel easier than others.</h3>
+  <p>
+    They are, and it is measured. A player who knows nothing and always gives the same
+    answer scores 38 out of 100 on area, 43 on population, 49 on GDP and 58 on density. So
+    every round deals two of each kind rather than picking at random — otherwise some
+    rounds would be markedly easier for a reason you could not see.
+  </p>
+  <p>
+    An entire question type was cut for failing that test: "how far apart are two
+    countries" scored <strong>74.8</strong> for someone who always answers 7,630km, because
+    nearly every pair of countries is between four and twelve thousand kilometres apart.
+  </p>
+</div>
+
+<div class="q">
+  <h3>A fact in a question is wrong.</h3>
+  <p>
+    Please tell me which one. Every figure is compiled from a source rather than typed, so
+    an error is either upstream or in how the question was built — and both are worth
+    fixing.
+  </p>
+</div>
+
+<h2>The app</h2>
+
+<div class="q">
+  <h3>Does it work offline?</h3>
+  <p>
+    It only works offline, in the sense that it never goes online at all. There is no
+    network code in it. See the <a href="privacy.html">privacy page</a>.
+  </p>
+</div>
+
+<div class="q">
+  <h3>Is there anything to buy?</h3>
+  <p>No. No paywall, no subscription, no adverts, nothing locked.</p>
+</div>
+
+<div class="q">
+  <h3>Can I reset my record?</h3>
+  <p>
+    Delete and reinstall the app. The record is a single small file in the app's own
+    storage and goes with it; nothing is kept anywhere else.
+  </p>
+</div>
+
+<footer>
+  Ballpark is made by Emre Gürbüzer.
+  Country data from mledoze/countries under the Open Database License; population and GDP
+  per capita from the World Bank.
+</footer>
+
+</main>
+</body>
+</html>
