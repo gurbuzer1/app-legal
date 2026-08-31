@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zindan: Kes ve Pişir — Gizlilik</title>
+<style>
+  :root {
+    --bg: #F6F3EE; --card: #FFFFFF; --text: #17150F; --dim: #5E5850; --line: #DDD6CB;
+    --accent: #8A4B14;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12100E; --card: #1D1A16; --text: #F3EFE8; --dim: #A79E92; --line: #332E28;
+      --accent: #E39A4E;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
+  h2 { font-size: 1.18rem; margin: 38px 0 10px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 7px; }
+  .lede {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 20px 22px; margin: 0 0 30px; font-size: 1.06rem;
+  }
+  .lede strong { color: var(--accent); }
+  code {
+    font: 0.9em ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--card); border: 1px solid var(--line); border-radius: 5px;
+    padding: 1px 5px;
+  }
+  footer { color: var(--dim); font-size: 0.92rem; margin-top: 46px; border-top: 1px solid var(--line); padding-top: 18px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Gizlilik</h1>
+<p class="updated">Zindan: Kes ve Pişir · son güncelleme 31 Ağustos 2026</p>
+
+<p class="lede">
+  <strong>Zindan hiçbir şey toplamaz, hiçbir şey göndermez ve gönderecek bir yolu
+  da yoktur.</strong> Uygulama hiçbir ağ isteği yapmaz. Hesap yok, izleme yok,
+  reklam yok, ve cihazdan bir şey taşıyabilecek üçüncü taraf kodu yok.
+</p>
+
+<h2>Uygulamanın sakladığı tek şey</h2>
+<p>
+  Telefonunuzda tek bir küçük dosya — <code>dungeon-kayit.json</code> — ve içine
+  yalnızca şunlar girer:
+</p>
+<ul>
+  <li>bulunduğunuz bölüm ve oda numarası;</li>
+  <li>canınız;</li>
+  <li>altınınız, deneyim puanınız ve seviyeniz;</li>
+  <li>kuşandığınız silah ve kalan dayanıklılığı;</li>
+  <li>çantanızdaki malzemeler ve bildiğiniz tarifler.</li>
+</ul>
+<p>
+  Başka hiçbir şey. Ne ne zaman oynadığınız, ne ne kadar oynadığınız, ne cihazınıza
+  dair herhangi bir bilgi. Dosya uygulamanın kendi deposunda durur, hiçbir yere
+  yüklenmez ve uygulamayı silince o da silinir.
+</p>
+
+<h2>Uygulamanın yapmadıkları</h2>
+<ul>
+  <li>Ağ isteği yok. Ne açılışta, ne oyun sırasında, ne de başka bir anda.</li>
+  <li>İzleme, çökme raporlama ya da atıf (attribution) kütüphanesi yok.</li>
+  <li>Reklam yok, reklam kimliği yok.</li>
+  <li>Hesap, giriş, e-posta ya da iletişim bilgisi yok.</li>
+  <li>Rehber, fotoğraf, konum, mikrofon ya da kameraya erişim yok.</li>
+  <li>Satın alma yok. Satılacak bir şey olmadığı için ödeme verisi de yok.</li>
+</ul>
+
+<h2>Buna neden inanabilirsiniz</h2>
+<p>
+  Çünkü söz verilmiyor, <strong>ölçülüyor</strong>. Oyunun gönderilen bütün kaynak
+  dosyaları <code>UnityWebRequest</code>, <code>HttpClient</code>,
+  <code>System.Net</code>, <code>Socket</code>, <code>WebSocket</code>, herhangi
+  bir <code>http://</code> veya <code>https://</code> adresi ve yaygın izleme /
+  reklam / çökme-raporlama kütüphanelerinin adları için tarandı: <strong>sıfır
+  eşleşme</strong>.
+</p>
+<p>
+  Dürüst olmak gerekirse bir ayrıntı var ve gizlemek yerine yazıyorum: gönderilen
+  pakette Unity motorunun kendi <code>UnityAnalyticsModule</code> kütüphanesi
+  <strong>bulunuyor</strong>. Oyun bu kütüphaneyi hiçbir yerde çağırmıyor — kaynak
+  kodda sıfır referansı var — ve motor onu proje ayarlarından bağımsız olarak
+  pakete koyuyor. (Paket tanımından kaldırıldı; ölçüldü ki bu, motor modülünün
+  pakete girmesini engellemiyor.)
+</p>
+<p>
+  Yani doğru cümle şu: <strong>oyun hiçbir ağ isteği yapmaz ve hiçbir izleme
+  çağrısı içermez</strong>; pakette duran kütüphane kullanılmayan ölü bir
+  bağımlılıktır. Bunu "kütüphane yok" diye yazmak daha temiz görünürdü ama
+  yanlış olurdu.
+</p>
+
+<h2>Oyunun içeriği nereden geliyor</h2>
+<p>
+  Hiçbir yerden indirilmiyor. Zindan odaları, canavarlar, tarifler ve sesler
+  uygulamanın içinde üretilir — sesler dahil: oyunda tek bir ses dosyası yoktur,
+  bütün efektler çalışma anında sentezlenir.
+</p>
+
+<h2>Çocuklar</h2>
+<p>
+  Zindan'ın çocuklar için güvenli olmasının sebebi basit: hiçbir yere ulaşamaz.
+  Satın alınacak bir şey, konuşulacak biri ve toplanacak bir veri yoktur.
+</p>
+
+<h2>Değişiklikler</h2>
+<p>
+  Bu sayfa değişirse yukarıdaki tarih değişir. Uygulama veri toplamaya başlarsa —
+  ki böyle bir niyet yok — bu sayfa önce güncellenir.
+</p>
+<p>
+  Bu politika hakkında sorular: <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a>.
+</p>
+
+<footer>
+  Zindan: Kes ve Pişir — Emre Gürbüzer. Bu sayfa statik bir dosya olarak sunulur
+  ve hiçbir çerez yazmaz.
+</footer>
+
+</main>
+</body>
+</html>
