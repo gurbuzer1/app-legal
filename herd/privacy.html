@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Move the Herd</title>
-<meta name="description" content="Move the Herd privacy policy — no account, no analytics, no ads, no tracking. The only network the app uses is Apple's own purchase system.">
+<meta name="description" content="Move the Herd privacy policy — no account, no analytics, no ads, no tracking. The only network the app uses is Apple's own purchase system and, if you choose it, Apple's Game Center leaderboard.">
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -29,6 +29,14 @@
     payment and to tell the app whether this device owns the unlock. That exchange is
     between you and Apple. We are not part of it and we never see it — see
     <a href="#purchases">Purchases</a> below.</p>
+  <p id="game-center">The second exception is also Apple's, and it only happens if you ask
+    for it: tapping <strong>Leaderboard</strong> opens Apple's Game Center. From then on
+    the game sends Game Center one number — your total stars — so it can rank you. Your
+    Game Center name, friends and identifier stay with Apple; the app never receives
+    them and we have no server that could. If you never tap Leaderboard, Game Center is
+    never contacted. Apple's handling of Game Center is described in
+    <a href="https://www.apple.com/legal/privacy/data/en/game-center/">Apple's Game Center
+    privacy notice</a>.</p>
 
   <h2>What is stored, and where</h2>
   <p>These are written to your device's own storage and stay there:</p>
@@ -36,7 +44,9 @@
     <li><strong>Your progress</strong> — which levels you have solved and the move
       sequence you solved them with, so the game can show your best result and unlock
       the next level.</li>
-    <li><strong>Your sound preference</strong> — whether sound is on or off.</li>
+    <li><strong>Your sound and haptics preferences</strong> — whether each is on or off.</li>
+    <li><strong>Whether you have opened the leaderboard</strong> — a single yes/no, so the
+      game knows to sign you in to Game Center quietly next time instead of asking.</li>
     <li><strong>Whether this device owns the unlock</strong>, and how many free hints
       you have used.</li>
   </ul>
