@@ -4,17 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Move the Herd</title>
-<meta name="description" content="Move the Herd privacy policy — no account, no analytics, no ads, no tracking. The only network the app uses is Apple's own purchase system and, if you choose it, Apple's Game Center leaderboard.">
+<meta name="description" content="Move the Herd privacy policy — no account, no analytics, no ads, no tracking. The only two network exchanges are Apple's own purchase system and, if you choose it, Apple's Game Center leaderboard.">
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-<header class="site-header">
-  <a href="../index.html" class="back-link">← All Apps</a>
-</header>
 <main>
   <span class="badge">PRIVACY POLICY</span>
   <h1>Move the Herd</h1>
-  <p class="meta">Effective: 6 September 2026 (updated the day the unlock went live)</p>
+  <p class="meta">Effective: 12 October 2026 · updated in the same release as version 1.1</p>
 
   <p>Move the Herd is a puzzle game about a small herd that all walks in the same
     direction. It has no account and no server of ours — this page is short because
@@ -24,46 +21,69 @@
   <p><strong>Nothing we can read.</strong> The game itself makes no network requests:
     there is no sign-in, nothing to sync, and no server of ours that could receive
     anything even if we wanted it to.</p>
-  <p>There is exactly one exception, and it is not ours: when you tap Unlock or
+  <p>There are exactly two exceptions. Both are Apple's rather than ours, and neither
+    reaches us.</p>
+  <p id="purchases-link"><strong>1. The unlock.</strong> When you tap Unlock or
     Restore, Apple's own purchase system (StoreKit) talks to Apple to take the
     payment and to tell the app whether this device owns the unlock. That exchange is
     between you and Apple. We are not part of it and we never see it — see
     <a href="#purchases">Purchases</a> below.</p>
-  <p id="game-center">The second exception is also Apple's, and it only happens if you ask
-    for it: tapping <strong>Leaderboard</strong> opens Apple's Game Center. From then on
-    the game sends Game Center one number — your total stars — so it can rank you. Your
-    Game Center name, friends and identifier stay with Apple; the app never receives
-    them and we have no server that could. If you never tap Leaderboard, Game Center is
-    never contacted. Apple's handling of Game Center is described in
-    <a href="https://www.apple.com/legal/privacy/data/en/game-center/">Apple's Game Center
-    privacy notice</a>.</p>
+  <p id="game-center"><strong>2. The leaderboard, only if you ask for it.</strong>
+    Tapping <strong>Leaderboard</strong> in Settings opens Apple's Game Center. From
+    then on the game sends Game Center one number — your total stars — so it can rank
+    you. That is the only value sent, and it is sent to Apple, not to us. Your Game
+    Center name, friends and player identifier stay with Apple: the app asks Game
+    Center only whether you are signed in, and the answer it receives is yes or no.
+    If you never tap Leaderboard, Game Center is never contacted, and nothing else in
+    the game requires it. Apple's handling of Game Center is described in
+    <a href="https://www.apple.com/legal/privacy/data/en/game-center/">Apple's Game
+    Center privacy notice</a>.</p>
 
   <h2>What is stored, and where</h2>
-  <p>These are written to your device's own storage and stay there:</p>
+  <p>These eight values are written to your device's own storage and stay there.
+    This is the complete list:</p>
   <ul>
-    <li><strong>Your progress</strong> — which levels you have solved and the move
-      sequence you solved them with, so the game can show your best result and unlock
-      the next level.</li>
-    <li><strong>Your sound and haptics preferences</strong> — whether each is on or off.</li>
-    <li><strong>Whether you have opened the leaderboard</strong> — a single yes/no, so the
-      game knows to sign you in to Game Center quietly next time instead of asking.</li>
-    <li><strong>Whether this device owns the unlock</strong>, and how many free hints
-      you have used.</li>
+    <li><strong>Your classic progress</strong> — which of the 236 classic levels you
+      have solved and the move sequence you solved them with, so the game can show
+      your best result and open the next level.</li>
+    <li><strong>Your progress in the new rules</strong> — the same thing for the six
+      season chapters, the Daily Herd and Endless, kept as a separate value.</li>
+    <li><strong>Your crystals</strong> — how many hints you can still afford.</li>
+    <li><strong>How many hints you have used</strong> — a counter kept from earlier
+      versions, so an update does not hand you hints you already spent.</li>
+    <li><strong>Your sound preference</strong> — on or off.</li>
+    <li><strong>Your haptics preference</strong> — on or off.</li>
+    <li><strong>Whether you have opened the leaderboard</strong> — a single yes/no, so
+      the game knows to sign you in to Game Center quietly next time instead of
+      asking again.</li>
+    <li><strong>Whether this device owns the unlock</strong> — a cached yes/no. The
+      real answer lives with Apple; this copy only saves asking on every launch.</li>
   </ul>
-  <p>That is the complete list. There is no profile, no identifier, no device
-    fingerprint and no usage history. Nothing here is personal information, and none
-    of it is readable by anyone but you.</p>
+  <p>There is no profile, no identifier, no device fingerprint and no usage history.
+    None of it is personal information, and none of it is readable by anyone but
+    you. Deleting the app deletes all eight.</p>
 
   <h2>Analytics and advertising</h2>
   <p><strong>There are none.</strong> No analytics service, no advertising network,
-    no crash reporter, no third-party SDK. Nothing counts how you play.</p>
+    no attribution or marketing SDK, no crash reporter, no tracking of any kind.
+    Nothing counts how you play.</p>
+  <p>To be precise rather than merely reassuring: the app is built on third-party
+    open-source code, and here is all of it. React and React Native for Web draw the
+    screens. Capacitor packages the app for iOS and provides the haptics (the small
+    tap when a move lands). Cordova Plugin Purchase is the bridge to Apple's
+    StoreKit, used only when you tap Unlock or Restore. The Game Center bridge is our
+    own code. <em>None</em> of these collects, transmits or stores anything about
+    you, and none of them is an analytics, advertising or attribution library.</p>
 
   <h2 id="purchases">Purchases</h2>
-  <p>The first 10 levels are free. Unlocking the remaining 109 is a single one-time
-    purchase; there is no subscription and nothing is consumable.</p>
+  <p>The first 15 classic levels are free, along with the Spring chapter, the Daily
+    Herd and challenge codes. Unlocking the remaining 221 classic levels, the five
+    other chapters, Endless, Reverse, the level editor and unlimited hints is a
+    single one-time purchase; there is no subscription and nothing is consumable.
+    Crystals are earned by playing and are not for sale.</p>
   <p>That purchase is handled entirely by Apple. We never see your card, your Apple
     ID, or your name — the app only ever learns whether this device owns the unlock,
-    and that answer is stored on the device like everything else here. There is no
+    and that answer is cached on the device like everything else here. There is no
     account and no server, so there is nothing for us to link a purchase to.</p>
   <p>Progress itself still cannot be bought. A level opens because you solved the one
     before it; the purchase removes the price, not the puzzle.</p>
@@ -71,12 +91,14 @@
   <h2>Deleting your data</h2>
   <p>Deleting the app removes every stored value with it. There is no copy anywhere
     else, so there is nothing left to request, export or erase. Your purchase is the
-    one thing that survives, because Apple — not we — remembers it; "Restore
-    purchases" asks Apple for it again.</p>
+    one thing that survives, because Apple — not we — remembers it; Settings →
+    <strong>Restore purchase</strong> asks Apple for it again. Any score you posted
+    to Game Center belongs to your Game Center account, and Apple's own settings
+    control it.</p>
 
   <h2>Children</h2>
-  <p>Move the Herd is suitable for all ages and collects no personal information from anyone,
-    including children.</p>
+  <p>Move the Herd is suitable for all ages and collects no personal information from
+    anyone, including children.</p>
 
   <h2>Changes</h2>
   <p>If a future version ever stores or sends something new, this page changes in the
