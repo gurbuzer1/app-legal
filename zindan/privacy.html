@@ -1,137 +1,19 @@
 <!doctype html>
-<html lang="tr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zindan: Kes ve Pişir — Gizlilik</title>
-<style>
-  :root {
-    --bg: #F6F3EE; --card: #FFFFFF; --text: #17150F; --dim: #5E5850; --line: #DDD6CB;
-    --accent: #8A4B14;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #12100E; --card: #1D1A16; --text: #F3EFE8; --dim: #A79E92; --line: #332E28;
-      --accent: #E39A4E;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
-    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  }
-  main { max-width: 41rem; margin: 0 auto; }
-  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
-  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
-  h2 { font-size: 1.18rem; margin: 38px 0 10px; letter-spacing: -0.01em; }
-  p { margin: 0 0 14px; }
-  ul { margin: 0 0 14px; padding-left: 1.3em; }
-  li { margin-bottom: 7px; }
-  .lede {
-    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
-    padding: 20px 22px; margin: 0 0 30px; font-size: 1.06rem;
-  }
-  .lede strong { color: var(--accent); }
-  code {
-    font: 0.9em ui-monospace, SFMono-Regular, Menlo, monospace;
-    background: var(--card); border: 1px solid var(--line); border-radius: 5px;
-    padding: 1px 5px;
-  }
-  footer { color: var(--dim); font-size: 0.92rem; margin-top: 46px; border-top: 1px solid var(--line); padding-top: 18px; }
-  a { color: var(--accent); }
-</style>
-</head>
-<body>
-<main>
-
-<h1>Gizlilik</h1>
-<p class="updated">Zindan: Kes ve Pişir · son güncelleme 31 Ağustos 2026</p>
-
-<p class="lede">
-  <strong>Zindan hiçbir şey toplamaz, hiçbir şey göndermez ve gönderecek bir yolu
-  da yoktur.</strong> Uygulama hiçbir ağ isteği yapmaz. Hesap yok, izleme yok,
-  reklam yok, ve cihazdan bir şey taşıyabilecek üçüncü taraf kodu yok.
-</p>
-
-<h2>Uygulamanın sakladığı tek şey</h2>
-<p>
-  Telefonunuzda tek bir küçük dosya — <code>dungeon-kayit.json</code> — ve içine
-  yalnızca şunlar girer:
-</p>
-<ul>
-  <li>bulunduğunuz bölüm ve oda numarası;</li>
-  <li>canınız;</li>
-  <li>altınınız, deneyim puanınız ve seviyeniz;</li>
-  <li>kuşandığınız silah ve kalan dayanıklılığı;</li>
-  <li>çantanızdaki malzemeler ve bildiğiniz tarifler.</li>
-</ul>
-<p>
-  Başka hiçbir şey. Ne ne zaman oynadığınız, ne ne kadar oynadığınız, ne cihazınıza
-  dair herhangi bir bilgi. Dosya uygulamanın kendi deposunda durur, hiçbir yere
-  yüklenmez ve uygulamayı silince o da silinir.
-</p>
-
-<h2>Uygulamanın yapmadıkları</h2>
-<ul>
-  <li>Ağ isteği yok. Ne açılışta, ne oyun sırasında, ne de başka bir anda.</li>
-  <li>İzleme, çökme raporlama ya da atıf (attribution) kütüphanesi yok.</li>
-  <li>Reklam yok, reklam kimliği yok.</li>
-  <li>Hesap, giriş, e-posta ya da iletişim bilgisi yok.</li>
-  <li>Rehber, fotoğraf, konum, mikrofon ya da kameraya erişim yok.</li>
-  <li>Satın alma yok. Satılacak bir şey olmadığı için ödeme verisi de yok.</li>
-</ul>
-
-<h2>Buna neden inanabilirsiniz</h2>
-<p>
-  Çünkü söz verilmiyor, <strong>ölçülüyor</strong>. Oyunun gönderilen bütün kaynak
-  dosyaları <code>UnityWebRequest</code>, <code>HttpClient</code>,
-  <code>System.Net</code>, <code>Socket</code>, <code>WebSocket</code>, herhangi
-  bir <code>http://</code> veya <code>https://</code> adresi ve yaygın izleme /
-  reklam / çökme-raporlama kütüphanelerinin adları için tarandı: <strong>sıfır
-  eşleşme</strong>.
-</p>
-<p>
-  Dürüst olmak gerekirse bir ayrıntı var ve gizlemek yerine yazıyorum: gönderilen
-  pakette Unity motorunun kendi <code>UnityAnalyticsModule</code> kütüphanesi
-  <strong>bulunuyor</strong>. Oyun bu kütüphaneyi hiçbir yerde çağırmıyor — kaynak
-  kodda sıfır referansı var — ve motor onu proje ayarlarından bağımsız olarak
-  pakete koyuyor. (Paket tanımından kaldırıldı; ölçüldü ki bu, motor modülünün
-  pakete girmesini engellemiyor.)
-</p>
-<p>
-  Yani doğru cümle şu: <strong>oyun hiçbir ağ isteği yapmaz ve hiçbir izleme
-  çağrısı içermez</strong>; pakette duran kütüphane kullanılmayan ölü bir
-  bağımlılıktır. Bunu "kütüphane yok" diye yazmak daha temiz görünürdü ama
-  yanlış olurdu.
-</p>
-
-<h2>Oyunun içeriği nereden geliyor</h2>
-<p>
-  Hiçbir yerden indirilmiyor. Zindan odaları, canavarlar, tarifler ve sesler
-  uygulamanın içinde üretilir — sesler dahil: oyunda tek bir ses dosyası yoktur,
-  bütün efektler çalışma anında sentezlenir.
-</p>
-
-<h2>Çocuklar</h2>
-<p>
-  Zindan'ın çocuklar için güvenli olmasının sebebi basit: hiçbir yere ulaşamaz.
-  Satın alınacak bir şey, konuşulacak biri ve toplanacak bir veri yoktur.
-</p>
-
-<h2>Değişiklikler</h2>
-<p>
-  Bu sayfa değişirse yukarıdaki tarih değişir. Uygulama veri toplamaya başlarsa —
-  ki böyle bir niyet yok — bu sayfa önce güncellenir.
-</p>
-<p>
-  Bu politika hakkında sorular: <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a>.
-</p>
-
-<footer>
-  Zindan: Kes ve Pişir — Emre Gürbüzer. Bu sayfa statik bir dosya olarak sunulur
-  ve hiçbir çerez yazmaz.
-</footer>
-
-</main>
-</body>
-</html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gizlilik politikası — Dungeon / Zindan: Kes ve Pişir</title>
+<meta name="description" content="Dungeon / Zindan oyun kayıtları, dış bağlantılar ve destek mesajları hakkında gizlilik bilgileri.">
+<link rel="canonical" href="https://app-legal-sigma.vercel.app/zindan/privacy.html"><link rel="alternate" hreflang="en" href="https://app-legal-sigma.vercel.app/zindan/privacy-en.html">
+<style>:root{color-scheme:light dark;--bg:#f7f4ed;--panel:#fffdf8;--ink:#172b2a;--muted:#4b615c;--line:#d3ddd6;--accent:#77500d}@media(prefers-color-scheme:dark){:root{--bg:#102022;--panel:#172e2e;--ink:#f7f1df;--muted:#c4d1c9;--line:#38534e;--accent:#f3cc75}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:760px;margin:auto;padding:30px 22px 65px}nav{display:flex;flex-wrap:wrap;gap:12px 24px;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:38px}a{color:var(--accent);text-underline-offset:4px}a:focus-visible{outline:3px solid var(--accent);outline-offset:5px;border-radius:2px}h1{font-size:clamp(2rem,7vw,3rem);line-height:1.12;letter-spacing:-.035em;margin:10px 0 15px}h2{font-size:1.25rem;line-height:1.35;margin:34px 0 12px}p{margin:0 0 16px}.eyebrow,.updated{font-size:.9rem;color:var(--muted)}.eyebrow{font-weight:750;letter-spacing:.08em;text-transform:uppercase}.lead{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;margin:27px 0}li{margin:9px 0}ul,ol{padding-left:24px}code{font-size:.9em;overflow-wrap:anywhere}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;color:var(--muted);font-size:.94rem}.skip{position:absolute;top:-70px}.skip:focus{top:10px;background:var(--panel);padding:10px}strong{font-weight:700}</style></head><body><a class="skip" href="#content">İçeriğe geç</a><main>
+<nav aria-label="Sayfa bağlantıları"><a href="privacy-en.html" lang="en">English</a><a href="support.html">Yardım ve destek</a></nav>
+<p class="eyebrow">Dungeon · Zindan: Kes ve Pişir</p><h1 id="content">Gizlilik politikası</h1><p class="updated">Güncelleme: 14 Ekim 2026</p>
+<div class="lead"><strong>Maceranız cihazınızda kaydedilir.</strong> Dungeon, hesap veya internet bağlantısı olmadan oynanabilir. Oyun, kayıtlı ilerlemenizi geliştiricinin işlettiği bir sunucuya göndermez. Bu sürümde reklam veya uygulama içi satın alma akışı yoktur.</div>
+<h2>Cihazınızda saklanan bilgiler</h2><p>Oyun; seçtiğiniz kahramanı, parayı, malzemeleri ve kalitelerini, kazanılmış ekipman seviyelerini, rekorları ve devam eden seferi kaydeder. Kaldığınız yerden devam etmek için kontrol noktasında koşu kimliği ve tohumu, geçen oyun süresi, oda durumu, düşmanlar, atışlar, güçlendirmeler ve yemek etkileri de bulunur. Ses tercihleri de cihazda tutulur.</p>
+<p>Güncel profil <code>dungeon-roomrun-v1.json</code> dosyasını kullanır. Geçici dosya, yedek ve yerel geçmiş klasörü, kesintiye uğramış veya hasarlı kayıtlardan kurtarmaya yardımcı olur. Eski bir kayıt varsa korunur; tamamlanmamış klasik koşu, yeni seferden ayrı tutulabilir. Dolayısıyla cihazda tek bir dosya yerine birden fazla kurtarma kopyası bulunabilir.</p>
+<h2>Analiz, reklam ve izinler</h2><p>Bu sürümde reklam, oyun içi davranış analizi veya geliştiriciye yönelik bulut çökme raporlama hizmetleri etkin değildir. Oyun sizden hesap açmanızı, rehber, konum, kamera, mikrofon veya fotoğraf arşivi erişimi vermenizi istemez. Oyunun motoru Unity’dir; motor paketlerinin projede bulunması, Unity’nin bütün isteğe bağlı hizmetlerinin çalıştığı anlamına gelmez.</p>
+<h2>Sizin açtığınız bağlantılar</h2><p>Privacy Policy veya Help &amp; Support seçeneğine dokunmak, tarayıcınızda bir web sayfası açar. Bu işlem internet kullanır. Sayfalarımız Vercel’de barındırılır: tarayıcınız sayfayı almak için IP adresiniz ve istek başlıkları gibi bağlantı bilgilerini barındırma hizmetine gönderir. Bu sayfalara reklam izleyicisi, analiz betiği veya çerez eklemiyoruz.</p>
+<p>Desteğe e-posta gönderirseniz, adresinizi ve ekler dahil göndermeyi seçtiğiniz içeriği alırız. Bunları yanıt vermek ve sorunu incelemek için kullanırız. Lütfen parola, ödeme bilgisi veya başka hassas bilgiler göndermeyin. Destek yazışmaları, cihazdaki oyun kaydından ayrıdır.</p>
+<h2>Saklama, yedekleme ve silme</h2><p>İlerleme ve kurtarma kopyaları uygulamanın yerel alanında tutulur; eski kurtarma dosyaları otomatik olarak temizlenmez. Silinecek bir oyun hesabı veya bulut kayıt hizmeti yoktur. Uygulamayı geçici olarak kaldırmak yerine silmek, kurulu uygulamanın yerel verilerini kaldırır. Cihaz veya iCloud yedekleri, Apple yedekleme ayarlarınıza göre bir kopya içerebilir; bunları ayrıca yönetmeniz gerekir. Artık bulunmayan yerel bir kaydı geri getiremeyiz.</p>
+<p>Apple; App Store, TestFlight, tanılama veya cihaz yedeği bilgilerini Apple ayarlarınız ve kendi politikaları doğrultusunda işleyebilir. Bunlar, geliştiricinin işlettiği oyun hizmetlerinden ayrıdır.</p>
+<p>Oyunla ilgili yardım almak, gönderdiğiniz bir mesaj hakkında soru sormak veya bu yazışmanın silinmesini istemek için aşağıdaki destek adresine yazabilirsiniz. İsteğinizi belirlemeye yetecek bilgiyi ekleyin; parola veya başka hassas bilgiler göndermeyin.</p>
+<h2>Çocuklar ve değişiklikler</h2><p>Aynı veri uygulamaları bütün oyuncular için geçerlidir. Oyunda fantastik dövüş bulunur; içeriğin yaş sınıflandırması App Store’da gösterilir. Veri uygulamalarımız değişirse bu politikayı ve tarihini güncelleriz.</p>
+<footer>Oyunla ilgili sorunuz veya bir sorun mu var? <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a><br>Emre Gürbüzer · Dungeon / Zindan: Kes ve Pişir</footer></main></body></html>

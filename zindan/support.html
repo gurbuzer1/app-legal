@@ -1,184 +1,23 @@
 <!doctype html>
-<html lang="tr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zindan: Kes ve Pişir — Destek</title>
-<style>
-  :root {
-    --bg: #F6F3EE; --card: #FFFFFF; --text: #17150F; --dim: #5E5850; --line: #DDD6CB;
-    --accent: #8A4B14; --good: #1F6B3A; --poor: #A32222;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #12100E; --card: #1D1A16; --text: #F3EFE8; --dim: #A79E92; --line: #332E28;
-      --accent: #E39A4E; --good: #7DD69B; --poor: #FF9A93;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; padding: 40px 20px 80px; background: var(--bg); color: var(--text);
-    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  }
-  main { max-width: 41rem; margin: 0 auto; }
-  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
-  .updated { color: var(--dim); font-size: 0.94rem; margin: 0 0 34px; }
-  h2 { font-size: 1.18rem; margin: 38px 0 10px; letter-spacing: -0.01em; }
-  p { margin: 0 0 14px; }
-  ul { margin: 0 0 14px; padding-left: 1.3em; }
-  li { margin-bottom: 7px; }
-  .q {
-    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
-    padding: 18px 20px; margin: 0 0 14px;
-  }
-  .q h3 { margin: 0 0 8px; font-size: 1.02rem; }
-  .q p:last-child { margin-bottom: 0; }
-  table { border-collapse: collapse; margin: 0 0 14px; font-size: 0.96rem; }
-  td { padding: 3px 18px 3px 0; }
-  td.n { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
-  code {
-    font: 0.9em ui-monospace, SFMono-Regular, Menlo, monospace;
-    background: var(--bg); border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px;
-  }
-  footer { color: var(--dim); font-size: 0.92rem; margin-top: 46px; border-top: 1px solid var(--line); padding-top: 18px; }
-  a { color: var(--accent); }
-</style>
-</head>
-<body>
-<main>
-
-<h1>Zindan: Kes ve Pişir — destek</h1>
-<p class="updated">Son güncelleme 31 Ağustos 2026 · <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a></p>
-
-<p>
-  Aşağıdakiler oyunun nasıl <em>hissettirmesi gerektiği</em> değil, gerçekten nasıl
-  çalıştığıdır.
-</p>
-
-<h2>Kumandalar</h2>
-<ul>
-  <li><strong>Sol baş parmak:</strong> ekranın sol yarısına nereye basarsanız çubuk
-    orada doğar; sürükleyerek yürürsünüz.</li>
-  <li><strong>SALLA:</strong> kılıcı savurur. Vuruş, baktığınız yönde ve silahın
-    menzili kadar bir yayı tarar — yanlış yerde durmak ıskalamak demektir.</li>
-  <li><strong>KAÇ:</strong> yuvarlanır. Yuvarlanmanın ilk anı dokunulmazdır, ama
-    tamamı değil; zamanlama ister.</li>
-  <li><strong>İLERİ:</strong> yalnızca oda temizken görünür.</li>
-  <li><strong>PİŞİR:</strong> yalnızca gerçekten pişirebileceğiniz tarif varken
-    görünür.</li>
-</ul>
-
-<h2>Dövüş</h2>
-
-<div class="q">
-  <h3>Canavarlar vurmadan önce ne yapıyor?</h3>
-  <p>
-    <strong>Telgraf açıyorlar.</strong> Vuruştan 0,45 saniye önce kolunu kaldırır ve
-    ayaklarının altında kırmızı bir halka büyür. O halkayı görünce yuvarlanmak
-    yetişir — yuvarlanma 0,30 saniye sürer, yani telgraftan kısadır. Bu iki sayı
-    bilerek birbirine bağlıdır.
-  </p>
-</div>
-
-<div class="q">
-  <h3>Canavarlar birbirinden nasıl ayrılıyor?</h3>
-  <p>
-    Siluetten. <strong>Geniş omuzlu ve boynuzlu</strong> olan üstünüze gelir;
-    <strong>ince, uzun ve asalı</strong> olan uzaktan atar; <strong>küçük, çökük ve
-    uzun kollu</strong> olan canı azalınca kaçar. Renk tek başına işaret değildir,
-    boy ve hat da değişir.
-  </p>
-</div>
-
-<h2>Pişirme — oyunun asıl mekaniği</h2>
-
-<div class="q">
-  <h3>Neden pişireyim?</h3>
-  <p>
-    Çünkü kalıcı güçlenmenin ana kaynağı odur. Canavar öldürünce malzeme düşer ve o
-    malzeme <strong>üç işe birden gidemez</strong>: pişirirseniz deneyim ve kalıcı
-    güç, satarsanız para, onarırsanız silahınız düzelir. Her turun gerçek kararı bu.
-  </p>
-</div>
-
-<div class="q">
-  <h3>Tarif "eksik" diyor, ne demek?</h3>
-  <p>
-    Tam olarak neyin eksik olduğunu söyler — "eksik: 2 Kiriş" gibi. Bazı malzemeler
-    yalnızca daha derin bölümlerde düşer, bazıları da yalnızca <strong>elit</strong>
-    canavarlardan (onların düşürdüğü malzeme iki kalite kademesi daha iyidir). Yani
-    bütün tarifler ilk bölümde açılmaz; bu bir hata değil, ilerlemenin kendisi.
-  </p>
-</div>
-
-<div class="q">
-  <h3>Pişirirken bir şey oluyor mu?</h3>
-  <p>
-    Evet — ve kastendir. Pişirmek zaman alır ve o sürede baskına uğrayabilirsiniz.
-    Durmanın bir bedeli olsun diye böyle.
-  </p>
-</div>
-
-<h2>Silah ve ölüm</h2>
-
-<div class="q">
-  <h3>Silahım kırıldı, gitti mi?</h3>
-  <p>
-    Hayır. <strong>Kırık silah kaybolmaz, kullanılamaz hâle gelir</strong> ve
-    envanterde durur; onarım malzeme ister. Yedeğiniz yoksa yumrukla devam
-    edersiniz. Kırılma o koşuyu cezalandırır, emeğinizi silmez.
-  </p>
-</div>
-
-<div class="q">
-  <h3>Ölünce ne kaybediyorum?</h3>
-  <p>
-    <strong>Malzemeniz, paranız ve seviyeniz durur.</strong> Kaybettiğiniz tek şey o
-    bölümdeki oda ilerlemesidir; bölümün başına dönersiniz. Ölüm ekranı bunu zaten
-    yazar.
-  </p>
-</div>
-
-<h2>Kayıt</h2>
-
-<div class="q">
-  <h3>Oyun kendi kendine kaydediyor mu?</h3>
-  <p>
-    Evet: her 20 saniyede bir, her bölüm sonunda ve başlığa dönerken. Başlıkta
-    <strong>DEVAM ET</strong> son kaydı yükler. <strong>YENİ OYUN kaydı silmez</strong> —
-    üzerine yazılana kadar durur.
-  </p>
-</div>
-
-<div class="q">
-  <h3>Kayıt bozulursa?</h3>
-  <p>
-    Oyun çökmez. Okunamayan bir kayıt reddedilir ya da eksik alanları varsayılana
-    düşürülerek onarılır; iki durumda da oyun oynanabilir kalır. Bu, sekiz ayrı
-    bozuk girdiyle sınanmıştır.
-  </p>
-</div>
-
-<h2>Dil</h2>
-<div class="q">
-  <h3>Oyun neden yalnızca Türkçe?</h3>
-  <p>
-    Şu an öyle. İngilizce desteği planlanıyor; eklendiğinde bu sayfa güncellenecek.
-  </p>
-</div>
-
-<h2>Bir şey mi bozuk?</h2>
-<p>
-  <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a> adresine yazın.
-  Hangi bölümde ve odada olduğunuzu ve ekranda ne gördüğünüzü yazarsanız çok
-  yardımcı olur.
-</p>
-
-<footer>
-  Zindan: Kes ve Pişir — Emre Gürbüzer. Bu sayfa statik bir dosya olarak sunulur
-  ve hiçbir çerez yazmaz.
-</footer>
-
-</main>
-</body>
-</html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yardım ve destek — Dungeon / Zindan: Kes ve Pişir</title>
+<meta name="description" content="Dungeon / Zindan için kontroller, pişirme, kahramanlar ve kayıt yardımı.">
+<link rel="canonical" href="https://app-legal-sigma.vercel.app/zindan/support.html"><link rel="alternate" hreflang="en" href="https://app-legal-sigma.vercel.app/zindan/support-en.html">
+<style>:root{color-scheme:light dark;--bg:#f7f4ed;--panel:#fffdf8;--ink:#172b2a;--muted:#4b615c;--line:#d3ddd6;--accent:#77500d}@media(prefers-color-scheme:dark){:root{--bg:#102022;--panel:#172e2e;--ink:#f7f1df;--muted:#c4d1c9;--line:#38534e;--accent:#f3cc75}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:760px;margin:auto;padding:30px 22px 65px}nav{display:flex;flex-wrap:wrap;gap:12px 24px;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:38px}a{color:var(--accent);text-underline-offset:4px}a:focus-visible{outline:3px solid var(--accent);outline-offset:5px;border-radius:2px}h1{font-size:clamp(2rem,7vw,3rem);line-height:1.12;letter-spacing:-.035em;margin:10px 0 15px}h2{font-size:1.25rem;line-height:1.35;margin:34px 0 12px}p{margin:0 0 16px}.eyebrow,.updated{font-size:.9rem;color:var(--muted)}.eyebrow{font-weight:750;letter-spacing:.08em;text-transform:uppercase}.lead{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;margin:27px 0}li{margin:9px 0}ul,ol{padding-left:24px}code{font-size:.9em;overflow-wrap:anywhere}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;color:var(--muted);font-size:.94rem}.skip{position:absolute;top:-70px}.skip:focus{top:10px;background:var(--panel);padding:10px}strong{font-weight:700}</style></head><body><a class="skip" href="#content">İçeriğe geç</a><main>
+<nav aria-label="Sayfa bağlantıları"><a href="support-en.html" lang="en">English</a><a href="privacy.html">Gizlilik politikası</a></nav>
+<p class="eyebrow">Dungeon · Zindan: Kes ve Pişir</p><h1 id="content">Yardım ve destek</h1><p class="updated">Güncelleme: 14 Ekim 2026</p>
+<div class="lead">Kahramanınızı seçin, zindanda savaşın ve topladığınız malzemeleri bir sonraki avantajınıza dönüştürün. Bu sayfa yeni <strong>25 odalı seferi</strong> anlatır. Tamamlanmamış eski 20 odalı koşular kendi kurallarını korur.</div>
+<h2>Hareket et, dur, saldır</h2><p>Oyun alanında parmağınızı sürükleyerek hareket edin. Parmağınızı bırakınca kahramanınız durur ve erişebildiği bir hedefe otomatik saldırır. Yaklaşan bir saldırıdan uzaklaşmak için tekrar hareket edin. Siperler atışları engelleyebilir; açık bir hedef yoksa yer değiştirin. Ayrı bir kılıç sallama veya yuvarlanma düğmesi yoktur.</p>
+<p>Archer ok atar, Butcher geri dönen bir satır kullanır, Mage delip geçen büyülü atışlar yapar. Butcher’ın atışı ağır ve ölçülüdür: satırın geri gelmesini bekleyin ve güvenli bir açıklık arayın. Kahraman seçimi yeni koşuya uygulanır; devam eden kayıtlı koşunun kahramanını değiştirmez.</p>
+<h2>Beş bölge, beş muhafız</h2><p>Yeni sefer, beş bölgeye yayılan 25 odadan oluşur. Her bölgede üç dövüş odası, sakin bir mutfak ve bir muhafız bulunur. Oda düzenleri koşular arasında değişir; her bölgenin farklı düşman grupları vardır. Saldırmak için durmadan önce zemindeki uyarıları ve muhafızın hareketlerini izleyin.</p>
+<p>Altın çıkışı açmak için bütün düşman dalgalarını yenin, sunulduğunda bir güç seçin ve kapıdan yürüyerek geçin. Koşu sırasında seçilen güçler yalnızca o koşuda geçerlidir.</p>
+<h2>Pişirme ve malzemeler</h2><p>Mutfaklar 4, 9, 14, 19 ve 24. odalardadır. Pişirme menüsünü burada açın; yedi tarifin tamamını Previous / Next ile inceleyebilirsiniz. Tarifler malzeme miktarını, varsa kaliteli malzeme gereksinimini ve etkilerini gösterir. Kaliteli malzemeler elit düşmanlardan ve muhafızlardan elde edilir.</p>
+<p>Tamamlanan yemek bir miktar can yeniler ve sonraki <strong>üç dövüş karşılaşması</strong> boyunca etkiler sağlar. Yeni yemek, önceki yemeğin etkilerinin yerini alır; etkiler üst üste birikmez. Mutfaklar güvenlidir. Pişirme birkaç saniye sürer; tamamlanmadan iptal etmek veya ayrılmak malzeme tüketmez. Bu seferde silah dayanıklılığı veya onarım sistemi yoktur.</p>
+<h2>Sonraki koşuya ne taşınır?</h2><p>Koşu yenilgi veya zaferle sona erdiğinde, kazandığınız para ve kullanmadığınız malzemeler kilere döner. Kazanılmış silah ve önlük geliştirmeleri korunur ve yeni seferleri güçlendirir. Yeni sefer 1. odadan başlar; o koşunun seviyesi, seçilmiş güçleri ve yemek etkileri yeniden başlar.</p>
+<p>Ana ekrandaki Workbench üzerinden kazandığınız parayı hasar veya azami can geliştirmelerine harcayabilirsiniz. Yeni sefer başlarken çantanıza depodan sınırlı miktarda malzeme alınır; fazlası ana ekrandaki kilerde kalır. Güncel oyunda reklam veya gerçek parayla satın alma ekranı yoktur.</p>
+<h2>Duraklat, kaydet ve devam et</h2><p>Ara vermeden önce oyunu duraklatın veya Save &amp; Return Home seçeneğini kullanın. Oyun oda geçişlerinde, önemli seçimlerden sonra ve uygulamanın duraklatıldığı ya da odağı kaybettiği bildirildiğinde de kayıt alır. Aktif dövüş sırasında düzenli disk yazımı yapmaktan kaçınır. Cihazın aniden kapanması, son başarılı kayıttan sonraki değişiklikleri yine de kaybettirebilir.</p>
+<p>Continue, kayıtlı koşuya döner. Yerel yedek ve geçmiş kopyaları, hasarlı bir kaydı kurtarmaya yardımcı olabilir. Oyun ilerlemeyi güvenle yükleyemiyor veya kaydedemiyorsa hata gösterir ve eski dosyaları sessizce değiştirmek yerine korur. Görünen mesajla birlikte desteğe yazın; ilerlemenizi kurtarmaya çalışırken uygulamayı silmeyin.</p>
+<h2>Eski koşuma ne olur?</h2><p>Tamamlanmamış kayıtlı 20 odalı koşunuza kendi kurallarıyla devam edebilirsiniz. Önce yeni sefere girerseniz klasik koşunuz silinmez, ayrı tutulur. Güncel sefer bittikten sonra Return to Your Saved Run ile geri dönebilirsiniz. Daha eski Dungeon kaydındaki para, malzeme ve desteklenen hasar ve can geliştirmeleri aktarılırken kaynak kayıt korunur.</p>
+<h2>Dil, ses ve yardım</h2><p>Güncel oyun menüleri ve yönergeleri İngilizcedir. Bu destek sayfası İngilizce ve Türkçe sunulur. Ses, Pause menüsünden kapatılabilir. Privacy Policy ve Help &amp; Support yalnızca siz seçtiğinizde tarayıcı açar; bu sayfalar internet ister, oynanış istemez.</p>
+<p>Yardım isterken cihaz modelini, iOS sürümünü, biliyorsanız oyun derleme numarasını, bulunduğunuz odayı ve ne olduğunu yazın. Ekran görüntüsü veya kısa kayıt yardımcı olabilir; yalnızca paylaşmak istediğiniz içeriği gönderin. Yerel kaydınıza uzaktan erişemeyiz.</p>
+<footer>Oyunla ilgili sorunuz veya bir sorun mu var? <a href="mailto:gurbuzer1@gmail.com">gurbuzer1@gmail.com</a><br>Emre Gürbüzer · Dungeon / Zindan: Kes ve Pişir</footer></main></body></html>
